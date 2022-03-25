@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+}
+
+body {
+   scroll-behavior: smooth;
+   scrollbar-width: thin;
+}
+
+.container{
+   height: 100vh;
+   padding: 0;
+   min-width: 100%;
+   font-family: 'Poppins', sans-serif;
+   overflow: hidden;
+}
+
+nav a {
+   text-decoration: none;
+   color: #fff;
+   transition: transform 200ms ease-in;
+}
+.header {
+   background-color: #364958;
+   color: #fff;
+   width: 100%;
+   font-size: 1.2em;
+   padding: 1.15rem 1.25rem;
+   position: fixed;
+   top: 0;
+   z-index: 555;
+}
+.inputs {
+   margin-top: 34px;
+}
+nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.search {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding-top: 5rem;
+   width: 100%;
+   background-color: #fff;
+   height:150px;
+   margin-bottom: 30px;
+
+}
+.search input {
+   border-radius: 1.05rem;
+   outline: none;
+   width: 16rem;
+   border: solid 1.4px #364958;
+   background-color: #fff;
+   color: #343434;
+   padding: 0.8em;
+   margin: 1.1em;
+   height: 40px;
+   transition: transform 200ms ease-in;
+}
+.search select {
+   border-radius: 1.05rem;
+   outline: none;
+   border: none;
+   margin: 1.02em 0;
+   padding: 0.5rem;
+   background-color: #364958;
+   color: #fff;
+   font-weight: 500;
+   height: 40px;
+}
+.hide {
+      display: none;
+   }
+
+.results {
+   background-color: #fff;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   padding-left: 0.9375rem;
+   padding-right: 0.9375rem;
+ 
+   
+}
+.content label {
+
+   transition: transform 200ms;
+}
+.content label:hover {
+   background-color: rgba(255,255,255,0.2);
+   transform: scale(1.08);
+}
+.btn {
+   display: none;
+   border-radius: 0.8rem;
+   outline: none;
+   border: 0;
+   width: 100%;
+   height: 100%;
+   background-color: transparent;
+   color: #fff;
+   text-align: center;
+   transition: transform 300ms ease-in;
+}
+#hack {
+   transform: scaleX(-2000px);
+}
+
+@media (max-width: 900px){
+   body .selectedColumns{
+      display:inline-block;
+      text-align: center;
+      width: 80px;
+      height: 40px;
+      padding-top: 0.5REM;
+      position: relative;
+      border-radius: 0.8rem;
+   }
+   .search {
+      flex-direction: row;
+   }
+   body .search select,body .search input {
+      font-size: 0.8rem;
+      
+   }
+   body .btn {
+      display: inline;
+      z-index: 99;
+   }
+   .btn::after {
+      content :'\25be';
+      padding-left: 10px;
+
+   }
+
+
+   body .content {
+      position: relative;
+      width: 100%;
+      background: #364958;
+      z-index: 999;
+      display: none;
+      border-radius: 0.8rem;
+      padding: 0.9rem;
+      font-size: 0.8rem;
+      text-align: center;
+      height: 110px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-width: thin;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+   }
+   .results .myTable {
+      padding: 0;
+   }
+   .myTable th {
+      font-size: 0.8rem;
+   }
+   .header {
+      font-size: 1.1rem;
+   }
+   .hideAll {
+      margin-bottom: 0.4rem;
+   }
+}
+.myTable {
+   max-width: 95%;
+   padding-left: 0.9375rem;
+   padding-right: 0.9375rem;
+   overflow: auto;  
+   height: 550px;
+   scrollbar-width: thin;
+}
+
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+   width: 100%;
+   
+
+}
+
+table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table > tbody > tr > td, table > tfoot > tr > th, table > tfoot > tr > td {
+	padding: 8px 20px;
+	line-height: 1.42857;
+	vertical-align: top;
+	border-top: 1px solid #ddd;
+}
+.table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #ddd;
+}
+thead:nth-child(1) {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+thead {
+   background-color: #364958;
+   z-index: 200;
+}
+th:hover,.search input:hover,.search select:hover,nav a:hover,label:hover {
+   transform: scale(1.051);
+   cursor: pointer;
+}
+
+th {
+   text-transform: capitalize;
+   line-height: 0;
+   border: solid 4px #FFFFFF;
+   max-width: 100%;
+   font-weight: normal;
+   padding: 8px 14px;
+   cursor: pointer;
+   color: #fff;
+   text-align:center;
+   font-size: 1.15rem;
+   transition: transform 200ms ease-in;
+}
+td {
+   border-bottom: solid 1.5px rgba(33, 33, 33, 0.4);
+      font-variant: small-caps;
+      border-right: solid 1.5px rgba(0, 0, 0, 0.4);
+      border-left: solid 1.5px rgba(0, 0, 0, 0.4);
+      overflow-wrap: break-word;
+      padding: 2.5px 5px;
+      font-size: 1.1em;
+      text-align: center;
+}
+input:checked {
+   filter: invert(30%) hue-rotate(18deg) brightness(1.7);
+}
+label{
+   margin-top: 1.05em;
+   transition: transform 200ms ease-in;
+   color: #fff;
+
+
+}
+label input:checked{
+   text-decoration: line-through;
+}
+.selectedColumns input {
+   display: none;
+}
+.selectedColumns {
+
+   background-color: #364958;
+  
+   width: 100%;
+
+}
+.content {
+   width: 100%;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+
+
+   .table-sortable th {
+   cursor: pointer;
+   }
+
+   .table-sortable .th-sort-asc::after {
+   content: "\25b4";
+   }
+
+   .table-sortable .th-sort-desc::after {
+   content: "\25be";
+   }
+
+   .table-sortable .th-sort-asc::after,
+   .table-sortable .th-sort-desc::after {
+   margin-left: 5px;
+   }
+ @media only screen and (max-width: 1250px) {
+   table th {
+      padding: 5px;
+      font-size: 1rem;
+   }
+   td{
+      font-size: 0.8rem;
+      padding: 5px;
+   }
+   .search input {
+      width: 12rem;
+   }
+   .search select {
+      width: 5.6rem;
+   }
+   
+
+
+}
+@media only screen and (max-width: 435px) {
+   .search .selectedColumns {
+      display: none;
+   }
+   
+
+}
+.hideAll{
+   outline: none;
+   border: 0;
+   background-color: #364958;
+   color: #fff;
+   padding: 0.557rem;
+   border-radius: 0.85rem;
+   width: fit-content;
+   transition: transform 200ms ;
+}
+.hideAll:hover {
+   transform: scale(1.05);
+   cursor: pointer;
+}
