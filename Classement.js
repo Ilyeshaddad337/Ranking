@@ -177,7 +177,7 @@ inserting(table);
 
 //now for the search 
 input.addEventListener('input',() => {
-  const value = input.value.toLowerCase();
+  const value = input.value.toLowerCase().trim();
   var column = select.value;
   switch (column) {
     case "All":
