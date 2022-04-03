@@ -168,6 +168,7 @@ nav {
    }
    .myTable th {
       font-size: 0.8rem;
+      margin:0px;  	
    }
    .header {
       font-size: 1.1rem;
@@ -221,7 +222,6 @@ th:hover,.search input:hover,.search select:hover,nav a:hover,label:hover {
 th {
    text-transform: capitalize;
    line-height: 0;
-   border: solid 4px #FFFFFF;
    max-width: 100%;
    font-weight: normal;
    padding: 8px 14px;
