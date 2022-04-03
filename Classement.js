@@ -2,20 +2,18 @@ const table = document.querySelector("table");
 let students = [];
 const input = document.querySelector('#searching');
 const select = document.querySelector('select');
-
-async function getData() {
-  const response = await fetch("./Final_results.csv");
-  const data = await response.text();
-
-  const rows = data.split("\n").slice(1);
-  rows.forEach((e) => {
-    students.push(e.split(","));
-  });
-  //now students has an array of students each student contain
-
-}
-//now i got the data student:[0-FamilyName,1-FirstName]
-//now i'll get the notes of every module
+const fileSelect = document.querySelector('#file');
+var files = ["./NotesEmd1.csv", "./NotesEmd2.csv", "stillWorking.txt"];
+ var myTable = document.querySelector(".myTable");
+ var p = document.createElement("p");
+ p.innerText = "No enough data ! ";
+ p.style.textAlign = "center";
+ p.style.padding = "1.2rem";
+ p.style.letterSpacing = "3px";
+ p.style.textTransform = "Capitalize";
+ p.style.fontSize = "1.4rem";
+ p.style.width = "100%";
+ myTable.appendChild(p);
 
 
 /**
@@ -154,26 +152,41 @@ document.querySelectorAll(".table-sortable .thN").forEach(headerCell => {
         sortTableByColumnN(tableElement, headerIndex, !currentIsAscending);
     });
 });
+async function getData(file) {
+  const response = await fetch(file);
+  const data = await response.text();
 
+  const rows = data.split("\n").slice(1);
+  rows.forEach((e) => {
+    students.push(e.split(","));
+  });
+  
+}
 //inserting the elements
-async function inserting(table) {
-  await getData();
+async function inserting(table,file) {
+ if (file !== "stillWorking.txt") {
+  p.classList.add('hide');
+  await getData(file);
   var tBody = table.tBodies[0];
   for (let i = 0; i < students.length; i++) {
     var tr = document.createElement("tr");
     for (let j = 0; j < students[i].length; j++) {
       var td = document.createElement("td");
       td.textContent = students[i][j];
-      if (j>=5) {
-        td.classList.add('hide'); 
+      if (j >= 5 && showHide.innerText == "Show All") {
+        td.classList.add("hide");
       }
       tr.appendChild(td);
     }
 
     tBody.appendChild(tr);
   }
+} else {
+ p.classList.remove('hide');
 }
-inserting(table);
+
+}
+inserting(table,'./NotesEmd1.csv');
 
 //now for the search 
 input.addEventListener('input',() => {
@@ -274,7 +287,7 @@ window.addEventListener('load', ()=>{
 labels.forEach((e,ind)=>{
   e.addEventListener('change', () =>{
     trs = [];
-     trs = table.querySelectorAll("tr");
+    trs = table.querySelectorAll("tr");
     trs = Array.from(trs);
     trs.shift();
     if (!e.firstElementChild.checked) {
@@ -368,4 +381,17 @@ showHide.addEventListener('click',() => {
       
     });
   }
+})
+
+
+//choose between the files
+fileSelect.addEventListener('change',() => {
+  var ind = parseInt(fileSelect.value);
+  var tBody = table.tBodies[0];
+  while (tBody.firstChild) {
+    tBody.removeChild(tBody.firstChild);
+  }
+  students = [];
+  inserting(table,files[ind]);
+  
 })
