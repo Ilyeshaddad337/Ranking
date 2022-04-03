@@ -221,13 +221,14 @@ th:hover,.search input:hover,.search select:hover,nav a:hover,label:hover {
 th {
    text-transform: capitalize;
    line-height: 0;
+   border: solid 4px #FFFFFF;
    max-width: 100%;
    font-weight: normal;
    padding: 8px 14px;
    cursor: pointer;
    color: #fff;
    text-align:center;
-   font-size: 1.1rem;
+   font-size: 1.15rem;
    transition: transform 200ms ease-in;
 }
 td {
@@ -313,7 +314,7 @@ label input:checked{
    
 
 }
-.hideAll{
+.hideAll , #file{
    outline: none;
    border: 0;
    background-color: #364958;
@@ -323,7 +324,7 @@ label input:checked{
    width: fit-content;
    transition: transform 200ms ;
 }
-.hideAll:hover {
+.hideAll:hover , #file:hover {
    transform: scale(1.05);
    cursor: pointer;
 }
