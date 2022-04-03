@@ -314,7 +314,7 @@ label input:checked{
    
 
 }
-.hideAll , #file{
+.hideAll ,#file{
    outline: none;
    border: 0;
    background-color: #364958;
@@ -324,7 +324,7 @@ label input:checked{
    width: fit-content;
    transition: transform 200ms ;
 }
-.hideAll:hover , #file:hover {
+.hideAll:hover ,#file:hover {
    transform: scale(1.05);
    cursor: pointer;
 }
