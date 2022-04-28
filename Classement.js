@@ -3,17 +3,8 @@ let students = [];
 const input = document.querySelector('#searching');
 const select = document.querySelector('select');
 const fileSelect = document.querySelector('#file');
-var files = ["./NotesEmd1.csv", "./NotesEmd2.csv", "stillWorking.txt"];
+var files = ["./NotesEmd1.csv", "./NotesEmd2.csv", "./Moyennes.csv"];
  var myTable = document.querySelector(".myTable");
- var p = document.createElement("p");
- p.innerText = "Not enough data ! ";
- p.style.textAlign = "center";
- p.style.padding = "1.2rem";
- p.style.letterSpacing = "3px";
- p.style.textTransform = "Capitalize";
- p.style.fontSize = "1.4rem";
- p.style.width = "100%";
- myTable.appendChild(p);
 
 
 /**
@@ -164,8 +155,8 @@ async function getData(file) {
 }
 //inserting the elements
 async function inserting(table,file) {
- if (file !== "stillWorking.txt") {
-  p.classList.add('hide');
+ 
+
   await getData(file);
   var tBody = table.tBodies[0];
   for (let i = 0; i < students.length; i++) {
@@ -181,9 +172,7 @@ async function inserting(table,file) {
 
     tBody.appendChild(tr);
   }
-} else {
- p.classList.remove('hide');
-}
+
 
 }
 inserting(table,'./NotesEmd1.csv');
