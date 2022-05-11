@@ -95,7 +95,7 @@ function sortTableByColumnN (table,column,asc=true) {
   }
 
   function sortDsc(arr) {
-    for (let i = 1; i < arr.length; i++) {
+    for (let i = 2; i < arr.length; i++) {
       for (let j = 0; j < arr.length - i; j++) {
         var aj=parseFloat(arr[j].querySelector(`td:nth-child(${column + 1})`).textContent);
         var aj1=parseFloat(arr[j+1].querySelector(`td:nth-child(${column + 1})`).textContent);
