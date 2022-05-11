@@ -323,6 +323,17 @@ const content =document.querySelector('.content');
     }
    } 
   })
+//choose between the files
+fileSelect.addEventListener('change',() => {
+  var ind = parseInt(fileSelect.value);
+  var tBody = table.tBodies[0];
+  while (tBody.firstChild) {
+    tBody.removeChild(tBody.firstChild);
+  }
+  students = [];
+  inserting(table,files[ind]);
+  
+})
 window.addEventListener('resize',() =>{
     const width =
       window.innerWidth ||
@@ -373,14 +384,4 @@ showHide.addEventListener('click',() => {
 })
 
 
-//choose between the files
-fileSelect.addEventListener('change',() => {
-  var ind = parseInt(fileSelect.value);
-  var tBody = table.tBodies[0];
-  while (tBody.firstChild) {
-    tBody.removeChild(tBody.firstChild);
-  }
-  students = [];
-  inserting(table,files[ind]);
-  
-})
+
