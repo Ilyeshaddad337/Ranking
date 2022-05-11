@@ -65,7 +65,7 @@ document.querySelectorAll(".table-sortable .thA").forEach(headerCell => {
 function sortTableByColumnN (table,column,asc=true) {
   const tBody = table.tBodies[0];
   const rows = Array.from(tBody.querySelectorAll("tr"));
-  for (let i = 0; i < rows.length; i++) {
+  for (let i = 0; i < rows.length-1; i++) {
     if (
       isNaN(
         rows[i].querySelector(`td:nth-child(${column + 1})`).textContent.trim()
