@@ -272,7 +272,8 @@ window.addEventListener('load', ()=>{
         labels[ind].style.textDecoration = 'line-through'  
       }
     })
-    alert("if you don't find yourself,that means you have some problems in the notes so please fill in form in the report section ,or report any bugs in the site if you find, thanks");
+    alert("if you don't find yourself,that means you have some problems in the notes so please fill in form in the report section ,
+if you do find yourself feel free to report any bugs in the site, thanks");
 })
 
 labels.forEach((e,ind)=>{
@@ -290,11 +291,9 @@ labels.forEach((e,ind)=>{
       });
       e.style.textDecoration = 'line-through'
     } else {
-      console.error(trs);
       theads[ind].classList.remove("hide");
       trs.forEach((e1) => {
         e1.querySelector(`td:nth-child(${ind + 1})`).classList.remove("hide");
-        console.error(e1)
       });
       e.style.textDecoration = "";
     }
