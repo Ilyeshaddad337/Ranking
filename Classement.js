@@ -6,7 +6,10 @@ const fileSelect = document.querySelector('#file');
 var files = ["./NotesEmd1.csv", "./NotesEmd2.csv", "./Moyennes.csv"];
  var myTable = document.querySelector(".myTable");
 
-
+window.addEventListener('load', (event) => {
+  alert("the averages can be wrong due to some technical issues, please if you find any,feel free to contact me 
+i.haddad@esi-sba.dz , mtt5l3ch ") 
+});
 /**
  * Sorts a HTML table.
  * 
