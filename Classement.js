@@ -272,8 +272,7 @@ window.addEventListener('load', ()=>{
         labels[ind].style.textDecoration = 'line-through'  
       }
     })
-    alert("if you don't find yourself,that means you have some problems in the notes so please fill in form in the report section ,
-if you do find yourself feel free to report any bugs in the site, thanks");
+    alert("if you don't find yourself,that means you have some problems in the notes so please fill in form in the report section ,\nif you do find yourself feel free to report any bugs in the site, thanks");
 })
 
 labels.forEach((e,ind)=>{
