@@ -4,9 +4,16 @@ const input = document.querySelector('#searching');
 const select = document.querySelector('select');
 const fileSelect = document.querySelector('#file');
 var files = ["./NotesEmd1.csv", "./NotesEmd2.csv", "./Moyennes.csv"];
- var myTable = document.querySelector(".myTable");
- 
+var myTable = document.querySelector(".myTable");
+var form1 = document.querySelector('#form1');
+var form2 = document.querySelector('#form2');
+var form3 = document.querySelector('#form3');
 
+window.addEventListener('load', ()=>{
+  form1.reset();
+  form2.reset();
+  form3.reset();
+})
 
 /**
  * Sorts a HTML table.
@@ -272,7 +279,7 @@ window.addEventListener('load', ()=>{
         labels[ind].style.textDecoration = 'line-through'  
       }
     })
-    alert("if you don't find yourself,that means you have some problems in the notes so please fill in form in the report section ,\nif you do find yourself feel free to report any bugs in the site, thanks");
+    alert("if you don't find yourself,that means you have some problems in the notes so please fill in form in the report section ,or report any bugs in the site if you find, thanks");
 })
 
 labels.forEach((e,ind)=>{
@@ -281,7 +288,7 @@ labels.forEach((e,ind)=>{
     trs = table.querySelectorAll("tr");
     trs = Array.from(trs);
     trs.shift();
-    t
+    
     if (!e.firstElementChild.checked) {
       theads[ind].classList.add("hide");
       trs.forEach((e1) => {
@@ -290,9 +297,11 @@ labels.forEach((e,ind)=>{
       });
       e.style.textDecoration = 'line-through'
     } else {
+      console.error(trs);
       theads[ind].classList.remove("hide");
       trs.forEach((e1) => {
         e1.querySelector(`td:nth-child(${ind + 1})`).classList.remove("hide");
+        console.error(e1)
       });
       e.style.textDecoration = "";
     }
