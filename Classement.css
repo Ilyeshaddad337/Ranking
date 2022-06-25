@@ -14,7 +14,6 @@ body {
 
 .container{
    height: 100vh;
-   padding: 0;
    min-width: 100%;
    font-family: 'Poppins', sans-serif;
    overflow: hidden;
@@ -35,13 +34,13 @@ nav a {
    top: 0;
    z-index: 555;
 }
-.inputs {
-   margin-top: 34px;
-}
 nav {
    display: flex;
    justify-content: space-between;
    align-items: center;
+}
+.inputs {
+   margin-top: 34px;
 }
 .search {
    display: flex;
@@ -117,6 +116,9 @@ nav {
 }
 #hack {
    transform: scaleX(-2000px);
+}
+.hello {
+   margin-bottom: 1.1rem;
 }
 
 @media (max-width: 900px){
@@ -215,7 +217,7 @@ thead {
    background-color: #364958;
    z-index: 200;
 }
-th:hover,.search input:hover,.search select:hover,nav a:hover,label:hover {
+th:hover,.search input:hover,nav a:hover,label:hover {
    transform: scale(1.051);
    cursor: pointer;
 }
@@ -325,7 +327,10 @@ label input:checked{
    width: fit-content;
    transition: transform 200ms ;
 }
-.hideAll:hover ,#file:hover {
+.hideAll:hover {
    transform: scale(1.05);
+   cursor: pointer;
+}
+select:hover {
    cursor: pointer;
 }

@@ -279,7 +279,6 @@ window.addEventListener('load', ()=>{
         labels[ind].style.textDecoration = 'line-through'  
       }
     })
-    alert("if you don't find yourself,that means you have some problems in the notes so please fill in form in the report section ,or report any bugs in the site if you find, thanks");
 })
 
 labels.forEach((e,ind)=>{
