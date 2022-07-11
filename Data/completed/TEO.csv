@@ -1,0 +1,290 @@
+N,Nom,Prenom,Exam1,Exam2,TD,Moy//
+1,ABAHRI,KHALIDA,16,15,13,//
+2,ABDELKADER,SAID,15.5,7.5,13,//
+3,ABDELLAOUI,Lyna,,,,//
+4,ABDELMALEK,Ahmed yacine,14.5,11,13,//
+5,ABDELMALEK,Lamia,14,14,12,//
+6,ABDESSELAM,Aimen,16.5,9,12,//
+7,ABID,Mohamed abdessetar,12,11,10,//
+8,ABOUCHE,Ikram,14,9,13,//
+9,ADDI,Mohammed,15,13,14,//
+10,ADJAOUD,Taous,19,16,14,//
+11,ADLAOUI,Mohammed abdelaziz,14.5,6.5,12,//
+12,AGGOUN,Feriel meriem,15,13,14,//
+13,AISSAOUI,Ayyoub,,,,//
+14,AISSAOUI,Ismail,15.5,11,13,//
+15,AIT CHABANE,Merieme,17.5,15.5,16,//
+16,ALI ABBOU,Oussama,14,10,10,//
+17,ALI BELHADJ,Youcef,17.5,7,9,//
+18,ALILI,Yacine abdelbadie,15,16,17,//
+19,ALLAOUA,Okba,16,11.5,12,//
+20,AMERI,Mohammed ayoub,15.5,7.5,10,//
+21,AMEUR AMEUR,Abdelkader,17.5,11.5,14,//
+22,AMIEUR,Zineb ichrake,14,10,13,//
+23,AMMI,Maissara,15,14,14,//
+24,ANANI,Moncef,11.5,7.5,15,//
+25,AOMAR,Mohamed abdelillah,11,12,10,//
+26,AOUAICHIA,Hafssa,14.5,12.5,16,//
+27,ARAAR,Mohamed taha amine,18,12,14,//
+28,ASSAS,Mohammed el amine,18,17,18,//
+29,ATAMNIA,Nadjib,15,10,10,//
+30,ATIK,Abdelali,15,12.5,16,//
+31,ATSAMNIA,Abderraouf,18,10,10,//
+32,AYADI,Alaa eddine,14,12,12,//
+33,AZIZI,Yahia nacer brahim,17.5,11.5,12,//
+34,AZROU,Adlane,17,16,20,//
+35,BADEREDDINE,HAITHAM,15,11,11,//
+36,BAGHDADLI,Abdelhadi,19,16,12,//
+37,BAHRI,Mohamed el amine,15,,,//
+38,BAHRI,Oussama,15,10,10,//
+39,BAICHE,Asmaa,18,15,14,//
+40,BAIDAR,SAMIR,16,12,14.5,//
+41,BARIK,Monsaf,12,10,10,//
+42,BEHLOUL,Abdeldjalil,15,12.5,14,//
+43,BEKHTI,Djalal,11,12,10,//
+44,BELABBAS,Asma,17,13,12,//
+45,BELAGGOUN,Anis walid ramdan,18,12,15,//
+46,BELHADJI,Mohamed amine,15,13.5,14,//
+47,BELHOUARI,Essadjidet,14,11.5,13,//
+48,BELKACEMI,Abderrahmane,15,13.5,16,//
+49,BELKHARCHOUCHE,Soundes,16.5,15.5,13,//
+50,BELKORCHE,Widad,15,11,12,//
+51,BELLAL,Ikram,18,15,14,//
+52,BELMANA,Soufyane,13,10.5,13,//
+53,BELMILOUD,Laid aboubakr,17,10.5,13,//
+54,BENAHMED,Firdaws sotra,14.5,10.5,12.5,//
+55,BENAINI,Amina,14,10,10,//
+56,BENAMEUR BELKACEM,Souad,16,13,12,//
+57,BENAMMAR,Moncef,17,16.5,18,//
+58,BENAOUDA,Tarik abdelhadi,14,15,16,//
+59,BENAOUF,MOHAMED RAMI,17.5,15,16,//
+,BENAZZI,Abdelwahab,16,14,14,//
+61,BENBAKRETI,Mohammed el amine,16,14,16.5,//
+62,BENBOUTA,Walid,17,9,10,//
+63,BENCHAREF,Fatima zohra,15.5,11,14,//
+64,BENCHAREF,Hassane,14,13.5,16,//
+65,BENCHETIOUI,Youcef haroune,18,18,18,//
+66,BENCHOHRA,Mohamed abderrahmane,16,12,16,//
+67,BENDAHOU,Mohammed houdeifa,18.5,5,7,//
+68,BENDOU,Ahmed el mahdi,17,14.5,15,//
+69,BENGHENIMA,Hafsa,16,16,15,//
+70,BENGHERBI,THIZIRI,18,16,16,//
+71,BENHENNEDA,Anis hichem,19.5,19,19,//
+72,BENIKHLEF,Houssam eddine,17,9.5,13,//
+73,BENLAZREG,Aya hafida,,,,//
+74,BENMANSOUR,Mohammed abdelhadi,13,15.5,16.5,//
+75,BENSAHRAOUI,Achraf elhabib,,,,//
+76,BENSALAH,Samah,16,8,10,//
+77,BENTCHICH,Chems eddine mohamed,11.5,7,12,//
+78,BENTENNAH,Ahmed,,,,//
+79,BENZAABAR,Ayham,15,12.5,12.5,//
+80,BENZAIMA,Fadi,17,13.5,16,//
+81,BENZAIT,Omar,0,,,//
+82,BENZAOUCHA,Asma,15,11,11,//
+83,BESSAIH,Abdelkader mahieddine,15,15.5,15.5,//
+84,BESTAOUI,Aymene abdelkarim,14,10,10,//
+85,BETTAYEB,Mohamed aimen,17,15,16,//
+86,BOUALEM,Toufik,,6,11,//
+87,BOUCHELAREM,Lydia  houyem,18.5,13.5,16,//
+88,BOUCHETA,Zahra,15,14,16,//
+89,BOUDIAF,Farah fatima zohra,14,16,18,//
+90,BOUFAFA,Mohamed,13,14,10,//
+91,BOUFISSIOU,Abderrahman,,,,//
+92,BOUGHALEM,Khayra,13,12,10,//
+93,BOUHALOUANE,Sid ahmed,14,9,13,//
+94,BOUHENNI,Othmane,10,10,10,//
+95,BOUKENNOUCHE,MARIEM,14,17,14,//
+96,BOUKHAROUBA,SOUAD,15.5,12,14,//
+97,BOUKHATEB,Mohammed,14.5,7.5,11,//
+98,BOUKRA BETTAYEB,Abdellah,15,11,12,//
+99,BOUKRARA,Melissa,17,16.5,17,//
+100,BOUNOUA,Chahinez,17.5,10,12,//
+101,BOUREKBA,Nacira,,,,//
+102,BOUTRIK,Mohamed,18.5,16.5,16,//
+103,BOUZIANE,Safia,,,,//
+104,CHAALA,Inas,16.5,12.5,14.5,//
+105,CHADOULI,Mohamed tahar,14.5,10,11,//
+106,CHAIB,Fakhr eddine fouzi,14.5,12.5,12,//
+107,CHAIB,Firas,17,10,14,//
+108,CHARRAK,Hossem eddine yakoub,15,11,14,//
+109,CHELLAL,Aicha,16,10.5,12,//
+110,CHERGUI,Mahdjouba bouchera,16,14,14,//
+111,CHERRAK,Ismail anis,19,10.5,12,//
+112,CHIALI,Akila,17.5,18,16.5,//
+113,DADDA,HAMIDA,15,14,14,//
+114,DADOUNE,Ikram,17,14,15,//
+115,DAHOUN,Manel,17,12,15.5,//
+116,DALLAA,Abdelsamad taki eddine,18,14.5,16,//
+117,DEBAB,Mohammed,2,,,//
+118,DERKI,Ayet halima,16.5,11,12.5,//
+119,DINE,Mohammed assam,14,12,11,//
+120,DJEBALI,Hadjer,,,,//
+121,DJEBBARI,Ichrak,18.5,12.5,13,//
+122,DJEMAI,Oumima,14,11,10,//
+123,DJENADI,Mohamed amine,18,13,13,//
+124,DJERAD,Abdelheq,15,11,14,//
+125,DJEZIRI,Oussama,19,17,18,//
+126,DJILALI BENFREDJ,Ishak,14.5,10,14,//
+127,DJILI,Maroua,14,14,16,//
+128,DJIROUN,Hiba,17.5,10,12,//
+129,DOUACHE,AHMED YACINE,,,,//
+130,DOUICHINE,Ilyes,,,,//
+131,DOUIS,Fatima zohra,15,11,15,//
+132,DOUKALI,Fatima zahra,14,14,16,//
+133,ELHETTAK,Narimene,17,16,17,//
+134,ELMOKRETAR,Asma,19,18,18,//
+135,ENNOUNI,MOURTADA ESSADIK,15,12,12,//
+136,FARADJI,Ahlam,13,11,14,//
+137,FARESSI,El hadj madani,14.5,12.5,15,//
+138,FARH,Abdallah,13.5,10,13,//
+139,FELLAH,SLIMÉNE ABDELHADI,15,12,10,//
+140,FELLAHI,Achref ghanem,12.5,7,10,//
+141,FENDI,Mohamed,12,14,16,//
+142,FERHAT,Younes,17,13.5,15.5,//
+143,FETTAH,Zahra amal,14,12.5,14,//
+144,FOULANI,Abdetaouab,0,6.5,9,//
+145,GACEM,Rafika,18,12,10,//
+146,GHALEM,Sara,16,14,16,//
+147,GHANDOUZ,AMINA,15.5,6,10,//
+148,GHILANE,RAYANE YASSINE,13,9.5,14.5,//
+149,GOUHMAZ,Mohammed abdelkader,15,14,16,//
+150,GOUSMI,Lina,15,13.5,15,//
+151,GROUNE,MERWA,14.5,8,10,//
+152,GUECHAOUI,Mohamed,15,14,16,//
+153,GUEHILIZ,Adel,18,15.5,17.5,//
+154,GUERINIK,Chemseddine abderrahmane,16.5,16.5,16,//
+155,GUESSAOUI,Khaled,13,11,10,//
+156,GUEZZEN,Hichem,18,16.5,15,//
+157,GUIDOUM,Noaman,14,10,10,//
+158,HACHEMI,Abdelaziz,12.5,9,13,//
+159,HADDAD,Ilyes,15.5,10.5,12,//
+160,HADJ ABDERRAHMANE,AHLEM CHAHINEZ,17,17,16,//
+161,HAKKAS,Yacine,15,9.5,11,//
+162,HALIMI,Abdelkrim,15,11.5,14,//
+163,HALITIM,Inas,16,15,16,//
+164,HALLOUCHE,Abdessamed,15,12.5,14,//
+165,HAMDANI,Ibrahim,14,10,12,//
+166,HAMDI,Aya,16.5,12,15,//
+167,HAMMADI,Mohammed,15,10,12,//
+168,HANAIA,YOUCEF,11.5,6.5,10,//
+169,HANNACHI,Seif errahmane,14.5,12,14,//
+170,HAOUARI,Mohamed,14,12.5,16,//
+171,HAOUARI,Mohamed abdelhafidh,18.5,11.5,14,//
+172,HARRATH,Bouchra,17,17,18,//
+173,HOCINI,Souha,14,14,14,//
+174,IBRIR,Sara,15,15,18,//
+175,IDRIS BEY,Hayet,,,,//
+176,KADDOUR BAKIR,Riham,15,11.5,14,//
+177,KADRI,Ayyoub,13.5,10,10,//
+178,KAHIA,Tayeb,18,14,16,//
+179,KAHL ERRAS,Assil,17.5,17,15,//
+180,KASDI,Cylia,17,14.5,18,//
+181,KASMI,Lamia,16,13,12,//
+182,KEBDANI,Racim,1,,,//
+183,KHALDI,Anis rabah,14,9,13,//
+184,KHALDI,Mohamed rafik,17,16,17,//
+185,KHALDI,Noura,14,13.5,15,//
+186,KHITER,Sara nadjet,16.5,12.5,13,//
+187,KHOBZAOUI,Ahmed yasser,18,16,14,//
+188,KRIM,Abdelouahab,14,14,12,//
+189,KRITER,Abdeladim,11,13,12,//
+190,LACHOUB,Hanane,14,10,12,//
+191,LAIB,Achraf baha eddine,,,,//
+192,LAIDOUNI,Ilyes,15.5,11,13,//
+193,LAKHMI,Hichem billal,14,15,14,//
+194,LALLICHE,Abdelhadi,16,13,16,//
+195,LAOUNI,Mohamed,14,10,10.5,//
+196,LARBI,Arslan,19,19,18,//
+197,LARBI,Mohammed achraf,14,7,10,//
+198,LATRACHE,Abdenour,16,11,12.5,//
+199,LEBAILI,MOHAMED OUAIL,17.5,14,14,//
+200,MADANI,Tayeb,15,11.5,14,//
+201,MAKHLOUFI,Aymen,17.5,14,16,//
+202,MAMMERI,Samy,17.5,19,18,//
+203,MANSOURI,Mohammed taha yassine,14,11,12,//
+204,MAREDJ,Abderrahmene,13,10,11,//
+205,MAROC,Abdelhakim fouad,18,13,10,//
+206,MATOUK,Abdennour,16.5,10,12,//
+207,MEDJAHED,Wassim,17,16.5,17,//
+208,MEFLAH,Hossam eddine,12,10,10,//
+209,MEFLAH,Yousra,13,18,14,//
+210,MEFTAH,Mehdi,,,,//
+211,MEHTAR TANI,Ahmed abdel illah,17.5,18.5,17,//
+212,MEHTOUGUI,Aya,19,14,12,//
+213,MEKHALFI,Mohamed abdel ouahed,,,,//
+214,MENAA,Amdjed abderrahmane,14,11,10,//
+215,MENOUCHI,Sid ali,16.5,16.5,15,//
+216,MENOUER,Aghilas micipsa,19,18,19,//
+217,MERAOUCHE,AMINA,,,,//
+218,MERZOUK,Allaeddine,15.5,9.5,10,//
+219,MERZOUKA,Younes abdel samade,15.5,14,18,//
+220,MESBAHI,Ibrahim,15,14,15,//
+221,MESSAOUDI,Nedhir baroudi,17,10,13,//
+222,MEZIANE,Mehdi,16,12,10,//
+223,MIDOUN,Amna manar,15,12.5,14.5,//
+224,MIRNES,Chaimaa,,,,//
+225,MOHAMADI,Ennaser salah eddine,16,12.5,13,//
+226,MOKADDEM,Sara,15.5,9.5,12,//
+227,MOKHTARI,Hadjia meriem,18,16,14,//
+228,MOSTEFAOUI,Toufik,14,13,12,//
+229,MOUFFOK,Mohamed akram,17,15,15,//
+230,MOUSSI,Mohamed el amine,16,16,14,//
+231,NACEF,Salah eddine,17.5,12,12,//
+232,NAMOUNE,Aissa,,,,//
+233,NESSAL,ZAKARIA RACHID,16,14,12,//
+234,NOURA,Lyna,14,14,14,//
+235,OMRANI,Rabah,15,13.5,14,//
+236,OMRI,Mohammed ilyes,15,12.5,15,//
+237,OTMANI,Yasmine rabiha,14,12,16,//
+238,OUARETH,Mohammed es salih,15,11,12,//
+239,OUCHENE,Ines bouchra,17,15.5,17,//
+240,OUDDANE,Youcef fahed,13.5,11,14,//
+241,OULAD SAID,Mohamed lamine,13,9.5,12,//
+242,OULDLARBI,Nour eddine rayane,17,18,18,//
+243,OURRED,Islem charaf eddine,16,13,13,//
+244,RABAHI,Mohamed fouad,16.5,11.5,12,//
+245,RAHALI,Akram,17,12,10,//
+246,RAHALI,ASMA,18,12,10,//
+247,RAHMANI,Rabah,15,16,15,//
+248,RAHMOUN,WASSIM,15,15,16,//
+249,RAHMOUNE,Wafaa,16.5,15,17,//
+250,RAHO,Narjes,14.5,14,15,//
+251,RAIS,Mohamed malek,15,12,10,//
+252,RAMLA,Yassine,14,10,11,//
+253,REBIAI,Mohamed,17,16,16,//
+254,REGAB,LABIBA,,,,//
+255,REHAHLA,IKRAM,15,12,13,//
+256,REZIGAT,Zakarya,11,10,10,//
+257,RHASKIL,Amina,,,,//
+258,ROUAINIA,Mohammed yacine,17,13.5,16,//
+259,ROUBEHIE,MOHAMED AMINE,,,,//
+260,SAADI,Ahmed,16,12,10,//
+261,SAIDANI,HAITHEM,15,14,14,//
+262,SAIDANI,Mahmoud yasser,14,12,10,//
+263,SAIDI,Mohamed Boumediene,14,15.5,12.5,//
+264,SAIHI,Abderrahmane adnane,13,12,11,//
+265,SALHI,Ayoub,17,12.5,17,//
+266,SALMI,Oussama,15,12,16,//
+267,SEBA,Abdelwaheb abderrahmène,19,17,17,//
+268,SEBAA,Wassim djillali,19,18,18,//
+269,SEGMANE,Abdessamed,14,11.5,15,//
+270,SENHADJI,Mohamed said,17.5,12,16,//
+271,SENOUCI,Ibrahim,15.5,15.5,16,//
+272,SERBISSE,Seif ellah,13.5,16,18,//
+273,SLAMA,IBRAHIM CHIHAB EDDINE,,,,//
+274,SLIMANI,Aymen,12,14,15,//
+275,TABENNHAS,ILYAS,13,11,10,//
+276,TAHIR,Abderrahmane el mehdi,18.5,12,16,//
+277,TAIBI,Narimane,15,11.5,13,//
+278,TOUAHRI,KHALID,15,6,8,//
+279,TOUBAL SEGHIR,Kheir eddine,18,13.5,15,//
+280,TOUMI,Adem,13.5,8.5,14,//
+281,YAGOUBI,Ayoub,13,10,12,//
+282,YAHIAOUI,Ali rabie,,,,//
+283,ZATTOUTA,NESRINE,14,9,10,//
+284,ZEDDOUN,Lokmane,15,13,15,//
+285,ZELLAGUI,Mohamed diaa eddine,10,11,10,//
+286,ZENASNI,Ibrahim el khalil,14,11,14,//
+287,ZENASNI,Youcef,16,16,16,//
+288,ZERGA,Elbatoul,17,10,14,//
+289,ZITOUNI,Ahmed,14,6.5,10,//
