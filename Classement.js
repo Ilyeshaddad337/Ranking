@@ -393,3 +393,9 @@ fileSelect.addEventListener('change',() => {
   inserting(table,files[ind]);
   
 })
+msgBtn = document.querySelector('.msgBtn')
+
+msgBtn.addEventListener('click', e => {
+  alert("Sorry about the second semestre , the Data that the administration sent (PV Globale) was a hell for me to convert and work with\nit is a scanned pdf that i couldn't convert without finding so many mistakes and typos\nSome Notes are missing some data (Algo without Averages, English without Averages and TDs)\ni tried to contact the administration and got no response yet, if they don't respond I give up\nI am sorry !")
+
+})

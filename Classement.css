@@ -10,6 +10,7 @@
 body {
    scroll-behavior: smooth;
    scrollbar-width: thin;
+
 }
 
 .container{
@@ -17,6 +18,10 @@ body {
    min-width: 100%;
    font-family: 'Poppins', sans-serif;
    overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
 }
 
 nav a {
@@ -217,7 +222,7 @@ thead {
    background-color: #364958;
    z-index: 200;
 }
-th:hover,.search input:hover,nav a:hover,label:hover {
+th:hover,.search input:hover,.msgBtn:hover,nav a:hover,label:hover {
    transform: scale(1.051);
    cursor: pointer;
 }
@@ -333,4 +338,17 @@ label input:checked{
 }
 select:hover {
    cursor: pointer;
+}
+
+.msgBtn {
+   border-radius: 1.05rem;
+   outline: none;
+   border: none;
+   margin: 1.02em 0;
+   padding: 0.5rem;
+   background-color: #364958;
+   color: #fff;
+   font-weight: 500;
+   height: 40px;
+   transition: tranform 0.5s ease-in-out;
 }
