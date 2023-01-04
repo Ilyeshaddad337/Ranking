@@ -3,7 +3,7 @@ let students = [];
 const input = document.querySelector('#searching');
 const select = document.querySelector('select');
 const fileSelect = document.querySelector('#file');
-var files = ["./NotesEmd1.csv", "./NotesEmd2.csv", "./Moyennes.csv"];
+var files = ["./2021-2022/NotesEmd1.csv", "./2021-2022/NotesEmd2.csv", "./2021-2022/Moyennes.csv","./2022-2023/NotesEmd1.csv"];
 var myTable = document.querySelector(".myTable");
 var form1 = document.querySelector('#form1');
 var form2 = document.querySelector('#form2');
@@ -163,8 +163,6 @@ async function getData(file) {
 }
 //inserting the elements
 async function inserting(table,file) {
- 
-
   await getData(file);
   var tBody = table.tBodies[0];
   students.pop();
@@ -183,7 +181,7 @@ async function inserting(table,file) {
   } 
 
 }
-inserting(table,'./NotesEmd1.csv');
+inserting(table,'./2021-2022/NotesEmd1.csv');
 
 //now for the search 
 input.addEventListener('input',() => {
@@ -263,6 +261,8 @@ input.addEventListener('input',() => {
       
   }
 });
+
+
 //hiding rows 
 const labels = document.querySelectorAll(".selCols");
 const theads = document.querySelectorAll("th");
@@ -315,7 +315,7 @@ const dropDown = document.querySelector('.btn');
 const content =document.querySelector('.content');
 
 
- dropDown.addEventListener("click", () => {
+dropDown.addEventListener("click", () => {
    const width =
      window.innerWidth ||
      document.documentElement.clientWidth ||
@@ -392,10 +392,4 @@ fileSelect.addEventListener('change',() => {
   students = [];
   inserting(table,files[ind]);
   
-})
-msgBtn = document.querySelector('.msgBtn')
-
-msgBtn.addEventListener('click', e => {
-  alert("Sorry about the second semestre , the Data that the administration sent (PV Globale) was a hell for me to convert and work with\nit is a scanned pdf that i couldn't convert without finding so many mistakes and typos\nSome Notes are missing some data (Algo without Averages, English without Averages and TDs)\ni tried to contact the administration and got no response yet, if they don't respond I give up\nI am sorry !")
-
 })
