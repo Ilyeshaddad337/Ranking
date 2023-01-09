@@ -10,7 +10,6 @@ var form2 = document.querySelector('#form2');
 var form3 = document.querySelector('#form3');
 var alertt = document.querySelector('.alert');
 
-
 var currentHeaders = [];
 window.addEventListener('load', ()=>{
   form1.reset();
@@ -298,7 +297,9 @@ async function inserting(table,file) {
 
     //adding event listener to the show/hide button
     showHide.notes = notes;
-    showHide.addEventListener('click',(e) => {
+
+    showHide.addEventListener('click',function hello(e) {
+      e.preventDefault();
       trs = [];
       trs = table.querySelectorAll("tr");
       trs = Array.from(trs);
@@ -338,7 +339,7 @@ async function inserting(table,file) {
   }
   
 }
-inserting(table,'./2021-2022/NotesEmd1.csv');
+inserting(table,files[3]);
 
 //now for the search 
 input.addEventListener('input',() => {

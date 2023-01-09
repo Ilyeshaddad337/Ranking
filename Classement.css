@@ -251,7 +251,7 @@ table tr td:first-child::after{
 }
 
 table tr th:first-child::before {
-   content: '#';
+   content: '';
    width: 50px;
    position: absolute;
    left: 0;
