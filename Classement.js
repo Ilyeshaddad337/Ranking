@@ -8,20 +8,17 @@ var myTable = document.querySelector(".myTable");
 var form1 = document.querySelector('#form1');
 var form2 = document.querySelector('#form2');
 var form3 = document.querySelector('#form3');
+var alertt = document.querySelector('.alert');
 
+
+var currentHeaders = [];
 window.addEventListener('load', ()=>{
   form1.reset();
   form2.reset();
   form3.reset();
 })
 
-/**
- * Sorts a HTML table.
- * 
- * @param {HTMLTableElement} table The table to sort
- * @param {number} column The index of the column to sort
- * @param {boolean} asc Determines if the sorting will be in ascending
- */
+
 function sortTableByColumnA(table, column, asc = true) {
   const dirModifier = asc ? 1 : -1;
   const tBody = table.tBodies[0];
@@ -58,16 +55,6 @@ function sortTableByColumnA(table, column, asc = true) {
     .querySelector(`th:nth-child(${column + 1})`)
     .classList.toggle("th-sort-desc", !asc);
 }
-//sort just the hesders with the class thA (which contains Alphabetical values)
-document.querySelectorAll(".table-sortable .thA").forEach(headerCell => {
-    headerCell.addEventListener("click", () => {
-        const tableElement = headerCell.parentElement.parentElement.parentElement;
-        const headerIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
-        const currentIsAscending = headerCell.classList.contains("th-sort-asc");
-
-        sortTableByColumnA(tableElement, headerIndex, !currentIsAscending);
-    });
-});
 
 // sortin numeric values 
 function sortTableByColumnN (table,column,asc=true) {
@@ -141,31 +128,118 @@ function sortTableByColumnN (table,column,asc=true) {
     .querySelector(`th:nth-child(${column + 1})`)
     .classList.toggle("th-sort-desc", !asc);
 }
-//sort just the headers with the class thN (which contains numeric values)
-document.querySelectorAll(".table-sortable .thN").forEach(headerCell => {
-    headerCell.addEventListener("click", () => {
-        const tableElement = headerCell.parentElement.parentElement.parentElement;
-        const headerIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
-        const currentIsAscending = headerCell.classList.contains("th-sort-asc");
 
-        sortTableByColumnN(tableElement, headerIndex, !currentIsAscending);
-    });
-});
+
+
+
 async function getData(file) {
   const response = await fetch(file);
   const data = await response.text();
-
+  currentHeaders = data.split("\n")[0].split(",");
   const rows = data.split("\n").slice(1);
   rows.forEach((e) => {
     students.push(e.split(","));
   });
-  
+ 
+}
+
+function insert_labels(content,labels,notes){
+  if (currentHeaders.length == 0) {
+    content.innerHTML = "No Data";
+  } else {
+    for (let i = 0; i < currentHeaders.length; i++) {
+      var label = document.createElement("label");
+      label.setAttribute("for", currentHeaders[i]);
+      label.classList.add("selCols")
+      label.textContent = currentHeaders[i];
+      var input = document.createElement("input");
+      input.setAttribute("type", "checkbox");
+      input.setAttribute("id", currentHeaders[i]);
+      input.setAttribute("value", currentHeaders[i]);
+      if (i >= 5) {
+        input.checked = false;
+        notes.push(input)
+        
+      } else {
+        input.setAttribute("checked", "checked");
+      } 
+      label.appendChild(input);
+      labels.push(label)
+      if (i >= 5 ) {
+        labels[i].style.textDecoration = 'line-through'
+      }
+      content.appendChild(label);
+    }
+  }
 }
 //inserting the elements
 async function inserting(table,file) {
   await getData(file);
+  if (file.indexOf("2022-2023") != -1) {
+    alertt.classList.remove("hide")
+  } else {
+    alertt.classList.add("hide")
+
+  }
+  // initialize the labels
+  var content = document.querySelector("div.content");
+  content.innerHTML = "";
+  var labels = []
+  var notes = []
+  insert_labels(content,labels,notes);
+  
+  // initialize table headers
+  var tHead = table.tHead;
+  
+  tHead.innerHTML = "";
+  let trr = document.createElement("tr");
+  
+  for (let i = 0; i < currentHeaders.length; i++) {
+    var th = document.createElement("th");
+    th.textContent = currentHeaders[i];
+    if (i >= 5 && showHide.innerText == "Show All") {
+      th.classList.add("hide");
+    }
+    if (isNaN(parseFloat(students[0][i]))) {
+      th.classList.add("thA");
+      
+    } else {  
+      th.classList.add("thN");
+      
+    }
+    trr.appendChild(th);
+  }
+  
+  //select all the th in table row
+  var ths = trr.querySelectorAll("th");
+  ths.forEach((th) => {
+    if (th.classList.contains("thA")) {
+      th.addEventListener("click", () => {
+        const tableElement = th.parentElement.parentElement.parentElement;
+        const headerIndex = Array.prototype.indexOf.call(th.parentElement.children, th);
+        const currentIsAscending = th.classList.contains("th-sort-asc");
+        
+        sortTableByColumnA(tableElement, headerIndex, !currentIsAscending);
+      });
+    } else {
+      th.addEventListener("click", () => {
+        const tableElement = th.parentElement.parentElement.parentElement;
+        const headerIndex = Array.prototype.indexOf.call(th.parentElement.children, th);
+        const currentIsAscending = th.classList.contains("th-sort-asc");
+        
+        sortTableByColumnN(tableElement, headerIndex, !currentIsAscending);
+      });
+      
+    }
+
+  });
+  tHead.appendChild(trr);
+
+  // initialize table body
   var tBody = table.tBodies[0];
-  students.pop();
+  if (students[students.length-1].length < currentHeaders.length){
+    students.pop();
+  }
   for (let i = 0; i < students.length; i++) {
     var tr = document.createElement("tr");
     for (let j = 0; j < students[i].length; j++) {
@@ -176,10 +250,84 @@ async function inserting(table,file) {
       }
       tr.appendChild(td);
     }
-
+    
     tBody.appendChild(tr);
   } 
+  //adding event listener to the labels
+  labels.forEach((e,ind)=>{
+    e.addEventListener('change', () =>{
+      trs = [];
+      trs = table.querySelectorAll("tr");
+      trs = Array.from(trs);
+      trs.shift();
+      
+      if (!e.firstElementChild.checked) {
+        ths[ind].classList.add("hide");
+        trs.forEach((e1) => {
+          e1.querySelector(`td:nth-child(${ind + 1})`).classList.add("hide");
+          
+        });
+        e.style.textDecoration = 'line-through'
+      } else {
+        ths[ind].classList.remove("hide");
+        trs.forEach((e1) => {
+          e1.querySelector(`td:nth-child(${ind + 1})`).classList.remove("hide");
+        });
+        e.style.textDecoration = "";
+      }
+        
+        
+    })
+  
+  })
 
+
+  if (notes.length == 0) {
+    showHide.classList.add("hide");
+  }else {
+    showHide.classList.remove("hide");
+
+    //adding event listener to the show/hide button
+    showHide.notes = notes;
+    showHide.addEventListener('click',(e) => {
+      trs = [];
+      trs = table.querySelectorAll("tr");
+      trs = Array.from(trs);
+      trs.shift();
+      if (showHide.innerText == "Show All") {
+        showHide.innerText ='Hide All';
+        if (e.currentTarget.notes.length > 0) {
+          e.currentTarget.notes.forEach((e,ind)=> {
+            e.checked = true;
+            ths[ind+5].classList.remove("hide");
+            trs.forEach((e1) => {
+              e1.querySelector(`td:nth-child(${ind + 6})`).classList.remove(
+                "hide"
+              );
+            
+            });
+            labels[ind + 5].style.textDecoration = "";
+                
+          })
+        }
+      } else {
+        showHide.innerText = "Show All";
+        if (e.currentTarget.notes.length > 0){
+          
+          e.currentTarget.notes.forEach((e, ind) => {
+            e.checked = false;
+            ths[ind+5].classList.add("hide");
+            trs.forEach((e1) => {
+              e1.querySelector(`td:nth-child(${ind + 6})`).classList.add("hide");
+            });
+            labels[ind+5].style.textDecoration = "line-through";
+            
+          });
+        }
+      }
+    })
+  }
+  
 }
 inserting(table,'./2021-2022/NotesEmd1.csv');
 
@@ -263,52 +411,6 @@ input.addEventListener('input',() => {
 });
 
 
-//hiding rows 
-const labels = document.querySelectorAll(".selCols");
-const theads = document.querySelectorAll("th");
-var notes =[];
-var trs;
-var inputs = Array.from(document.querySelectorAll('input'));
-inputs.pop();
-inputs.shift();
-window.addEventListener('load', ()=>{
-    inputs.forEach((inp,ind) =>{
-      if (ind >=5) {
-        inp.checked = false;
-        notes.push(inp)
-        labels[ind].style.textDecoration = 'line-through'  
-      }
-    })
-})
-
-labels.forEach((e,ind)=>{
-  e.addEventListener('change', () =>{
-    trs = [];
-    trs = table.querySelectorAll("tr");
-    trs = Array.from(trs);
-    trs.shift();
-    
-    if (!e.firstElementChild.checked) {
-      theads[ind].classList.add("hide");
-      trs.forEach((e1) => {
-        e1.querySelector(`td:nth-child(${ind + 1})`).classList.add("hide");
-        
-      });
-      e.style.textDecoration = 'line-through'
-    } else {
-      console.error(trs);
-      theads[ind].classList.remove("hide");
-      trs.forEach((e1) => {
-        e1.querySelector(`td:nth-child(${ind + 1})`).classList.remove("hide");
-        console.error(e1)
-      });
-      e.style.textDecoration = "";
-    }
-      
-      
-  })
-
-})
 
 
 const dropDown = document.querySelector('.btn');
@@ -348,38 +450,6 @@ window.addEventListener('resize',() =>{
 } )
 
 const showHide =document.querySelector('.hideAll');
-showHide.addEventListener('click',() => {
-  trs = [];
-  trs = table.querySelectorAll("tr");
-  trs = Array.from(trs);
-  trs.shift();
-  if (showHide.innerText == "Show All") {
-    showHide.innerText ='Hide All';
-    notes.forEach((e,ind)=> {
-      e.checked = true;
-      theads[ind+5].classList.remove("hide");
-      trs.forEach((e1) => {
-        e1.querySelector(`td:nth-child(${ind + 6})`).classList.remove(
-          "hide"
-        );
-       
-      });
-      labels[ind + 5].style.textDecoration = "";
-          
-    })
-  } else {
-    showHide.innerText = "Show All";
-    notes.forEach((e, ind) => {
-      e.checked = false;
-      theads[ind+5].classList.add("hide");
-      trs.forEach((e1) => {
-        e1.querySelector(`td:nth-child(${ind + 6})`).classList.add("hide");
-      });
-      labels[ind+5].style.textDecoration = "line-through";
-      
-    });
-  }
-})
 
 
 //choose between the files

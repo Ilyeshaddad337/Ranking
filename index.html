@@ -30,30 +30,7 @@
               <label for="#hack" class="btn">Filter</label>
                <input type="checkbox" name="" id="hack" style="display: none;position: absolute;">
                <div class="content">
-                  <label class =" selCols"for="column1"><input type="checkbox"checked id="column1"> Section</label>
-                  <label class =" selCols"for="column2"><input type="checkbox" checked id="column2"> Groupe</label>
                   
-                  <label class =" selCols"for="column3"><input type="checkbox" checked id="column3"> Rank</label>
-                  
-                  <label class =" selCols"for="column4"> <input type="checkbox" checked id="column4">Name</label>
-                  
-                  <label class =" selCols"for="column5"><input type="checkbox" checked id="column5"> Average</label>
-                  
-                  <label class =" selCols"for="column6"> <input type="checkbox" checked id="column6"> Algo</label>
-                  
-                  <label class =" selCols"for="column7"><input type="checkbox" checked id="column7"> Analyse</label>
-                  
-                  <label class =" selCols"for="column8"><input type="checkbox" checked id="column8"> Archi</label>
-                  
-                  <label class =" selCols"for="column9"><input type="checkbox" checked id="column9"> Electricity</label>
-                  
-                  <label class =" selCols"for="column10"><input type="checkbox" checked id="column10"> Algebre</label>
-                  
-                  <label class =" selCols"for="column11"><input type="checkbox" checked id="column11"> T.E.E</label>
-                  
-                  <label class =" selCols"for="column12"> <input type="checkbox" checked id="column12"> B&W</label>
-                  
-                  <label class =" selCols"for="column13"><input type="checkbox" checked id="column13"> Sys</label>
                </div>
            </form>
          </div>  
@@ -63,7 +40,7 @@
             <input id="searching" type="text" placeholder="type the words..">
             <select >
                <option value="All">All Columns</option>
-               <option value="Sct">Sections</option>
+               <!-- <option value="Sct">Sections</option>
                <option value="Groupe">Groups</option>
                <option value="#Rank">#Ranks</option>
                <option value="Full Name">Full Names</option>
@@ -75,7 +52,7 @@
                <option value="Algebra">Algebra</option>
                <option value="T.E.E">T.E.E</option>
                <option value="B&W">B&W</option>
-               <option value="Sys">Sys</option>
+               <option value="Sys">Sys</option> -->
             </select>
          </form>
       </div>
@@ -94,31 +71,19 @@
                </optgroup>
             </optgroup>
             <optgroup label="2022-2023">
-               <optgroup label="  Not available yet !">
-                  <!-- <option value="3">Notes EMD 01</option> -->
+               <optgroup label="  Algebra">
+                  <option value="3">Notes EMD 01</option> 
                </optgroup>
             </optgroup>
          </select>   
    </form>
    <div class="myTable">
-      
+      <div class="alert alert-pry" role="alert">
+         Don't bother with your weird arabic name :D
+       </div>
    <table class="table-sortable table-responsive">
    <thead>
-      <tr>
-         <th class="thA">sct</th>
-           <th class="thN">grp</th>
-           <th class="thN">#Rank</th>
-           <th class="thA">Name</th>
-           <th class="thN">avrg</th>
-           <th class="hide thN">algo</th>
-           <th class="hide thN">analyse</th>
-           <th class="hide thN">archi</th>
-           <th class="hide thN">electricity</th>
-           <th class="hide thN">algebra</th>
-           <th class="hide thN">t.e.e</th>
-           <th class="hide thN">b&w</th>
-           <th class="hide thN">sys</th>
-      </tr>
+      
     </thead>
     <tbody>
     </tbody>
