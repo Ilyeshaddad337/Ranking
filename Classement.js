@@ -3,7 +3,7 @@ let students = [];
 const input = document.querySelector('#searching');
 const select = document.querySelector('select');
 const fileSelect = document.querySelector('#file');
-var files = ["./2021-2022/NotesEmd1.csv", "./2021-2022/NotesEmd2.csv", "./2021-2022/Moyennes.csv","./2022-2023/NotesEmd1.csv"];
+var files = ["./2021-2022/NotesEmd1.csv", "./2021-2022/NotesEmd2.csv", "./2021-2022/Moyennes.csv","./2022-2023/algebre3-s1-emd1-promo.csv","./2022-2023/proba-s1-emd1-promo.csv","./2022-2023/eln2-s1-emd1-promo.csv","./2022-2023/eng-s1-emd1-promo.csv"];
 var myTable = document.querySelector(".myTable");
 var form1 = document.querySelector('#form1');
 var form2 = document.querySelector('#form2');
@@ -63,7 +63,7 @@ function sortTableByColumnN (table,column,asc=true) {
   for (let i = 0; i < rows.length; i++) {
     if (
       isNaN(
-        rows[i].querySelector(`td:nth-child(${column + 1})`).textContent.trim()
+        parseFloat(rows[i].querySelector(`td:nth-child(${column + 1})`).textContent.trim()) 
       )
     ) {
       rows[i].querySelector(`td:nth-child(${column + 1})`).textContent = 0;
@@ -133,20 +133,33 @@ function sortTableByColumnN (table,column,asc=true) {
 
 
 async function getData(file) {
+  students = []
   const response = await fetch(file);
-  const data = await response.text();
+  const data = await response.text();  
+  if (data.indexOf('html') != -1) {
+    currentHeaders = ['There is no data'];
+
+    students.push(['No data'])
+
+  }else {
   currentHeaders = data.split("\n")[0].split(",");
   const rows = data.split("\n").slice(1);
   rows.forEach((e) => {
     students.push(e.split(","));
   });
- 
+}
 }
 
 function insert_labels(content,labels,notes){
   if (currentHeaders.length == 0) {
-    content.innerHTML = "No Data";
-  } else {
+    content.innerHTML = "<label>No Data</label>";
+    alertt.classList.add("hide");
+  } else if (currentHeaders[0] == "There is no data") {
+    content.innerHTML = "<label>No Data</label>";
+    alertt.classList.add("hide");
+
+  } 
+  else {
     for (let i = 0; i < currentHeaders.length; i++) {
       var label = document.createElement("label");
       label.setAttribute("for", currentHeaders[i]);
@@ -175,12 +188,8 @@ function insert_labels(content,labels,notes){
 //inserting the elements
 async function inserting(table,file) {
   await getData(file);
-  if (file.indexOf("2022-2023") != -1) {
-    alertt.classList.remove("hide")
-  } else {
-    alertt.classList.add("hide")
-
-  }
+  alertt.classList.remove("hide")
+  setTimeout(function(){ alertt.classList.add("hide") }, 15000);
   // initialize the labels
   var content = document.querySelector("div.content");
   content.innerHTML = "";

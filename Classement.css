@@ -12,6 +12,18 @@ body {
    scrollbar-width: thin;
 
 }
+.wrap {
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: center;
+   gap: 20px;
+   width: 100%;
+}
+
+.wrap .rank {
+   margin-top: 45px;
+
+}
 .alert-pry {
    color: #004085;
    background-color: #cce5ff;
@@ -210,8 +222,39 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
    width: 100%;
-   
+   counter-reset: row-num - 1 ;
 
+}
+table tr {
+   counter-increment: row-num;
+}
+table tr td:first-child {
+   position: relative;
+   text-align: center;
+   padding-left: 50px;
+}  
+table tr td:first-child::before {
+   content: counter(row-num);
+   width: 50px;
+   position: absolute;
+   left: 0;
+}
+table tr td:first-child::after{
+   content: "";
+   top: 0;
+   position: absolute;
+   border-left: solid 2px #ddd;
+   width: 100%;
+   height: 100%;
+   display: block;
+
+}
+
+table tr th:first-child::before {
+   content: '#';
+   width: 50px;
+   position: absolute;
+   left: 0;
 }
 
 table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table > tbody > tr > td, table > tfoot > tr > th, table > tfoot > tr > td {
