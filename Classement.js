@@ -339,84 +339,94 @@ async function inserting(table,file) {
   }
   
 }
-inserting(table,files[3]);
+inserting(table,files[4]);
 
 //now for the search 
 input.addEventListener('input',() => {
-  const value = input.value.toLowerCase().trim();
-  var column = select.value;
-  switch (column) {
-    case "All":
-      column = "do not choose";
-      break;
-    case "Sct":
-      column = 0;
-      break;
-    case "Groupe":
-      column = 1;
-      break;
-    case "#Rank":
-      column = 2;
-      break;
-    case "Full Name":
-      column = 3;
-      break;
-    case "Avrg":
-      column = 4;
-      break;
-    case "Algo":
-      column = 5;
-      break;
-    case "Analyse":
-      column = 6;
-      break;
-    case "Archi":
-      column = 7;
-      break;
-    case "Electricity":
-      column = 8;
-      break;
-    case "Algebra":
-      column = 9;
-      break;
-    case "T.E.E":
-      column = 10;
-      break;
-    case "B&W":
-      column = 11;
-      break;
-    case "Sys":
-      column = 12;
-      break;
-  };
+  var value = input.value.toLowerCase();
   const tBody = table.tBodies[0];
   const rows = Array.from(tBody.querySelectorAll("tr"));
-  if (column == "do not choose") {
-      rows.forEach((e) => {
-      if (e.textContent.toLowerCase().match(value) === null) {
-        e.classList.add('hide');
-      }else {
-        e.classList.remove('hide')
-      }
+  if (value == "") {
+    
+    rows.forEach((e) => {
+      e.classList.remove("selected");
     });
-  } else {
-  
-      rows.forEach((e) => {
-        if (!e.querySelector(`td:nth-child(${column + 1})`).classList.contains('hide')) {
-          if (
-            e
-              .querySelector(`td:nth-child(${column + 1})`)
-              .textContent.toLowerCase()
-              .match(value) === null
-          ) {
-            e.classList.add("hide");
-          } else {
-            e.classList.remove("hide");
-          }
+  }else {
+    value = value.trim();
+    var column = select.value;
+    switch (column) {
+      case "All":
+        column = "do not choose";
+        break;
+      case "Sct":
+        column = 0;
+        break;
+      case "Groupe":
+        column = 1;
+        break;
+      case "#Rank":
+        column = 2;
+        break;
+      case "Full Name":
+        column = 3;
+        break;
+      case "Avrg":
+        column = 4;
+        break;
+      case "Algo":
+        column = 5;
+        break;
+      case "Analyse":
+        column = 6;
+        break;
+      case "Archi":
+        column = 7;
+        break;
+      case "Electricity":
+        column = 8;
+        break;
+      case "Algebra":
+        column = 9;
+        break;
+      case "T.E.E":
+        column = 10;
+        break;
+      case "B&W":
+        column = 11;
+        break;
+      case "Sys":
+        column = 12;
+        break;
+    };
+    
+    if (column == "do not choose") {
+        rows.forEach((e) => {
+        if (e.textContent.toLowerCase().match(value) !== null) {
+          e.classList.add('selected');
+          e.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
+        }else {
+          e.classList.remove('selected')
         }
-      })
-      
-      
+      });
+    } else {
+    
+        rows.forEach((e) => {
+          if (!e.querySelector(`td:nth-child(${column + 1})`).classList.contains('hide')) {
+            if (
+              e
+                .querySelector(`td:nth-child(${column + 1})`)
+                .textContent.toLowerCase()
+                .match(value) === null
+            ) {
+              e.classList.add("hide");
+            } else {
+              e.classList.remove("hide");
+            }
+          }
+        })
+        
+        
+    }
   }
 });
 
