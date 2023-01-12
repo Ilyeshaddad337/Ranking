@@ -1,10 +1,12 @@
 const table = document.querySelector("table");
 let students = [];
-let startt = 9
+let startt = 3
 const input = document.querySelector('#searching');
 const select = document.querySelector('select');
 const fileSelect = document.querySelector('#file');
-var files = ["./2021-2022/NotesEmd1.csv", "./2021-2022/NotesEmd2.csv", "./2021-2022/Moyennes.csv","./2022-2023/sfsd-s1-emd1-promo.csv","./2022-2023/algebre3-s1-emd1-promo.csv","./2022-2023/analyse3-s1-emd1-promo.csv","./2022-2023/proba-s1-emd1-promo.csv","./2022-2023/eln2-s1-emd1-promo.csv","./2022-2023/eng-s1-emd1-promo.csv","./2022-2023/archi2-s1-emd1-promo.csv"];
+
+//"./2022-2023/sfsd-s1-emd1-promo.csv","./2022-2023/algebre3-s1-emd1-promo.csv","./2022-2023/analyse3-s1-emd1-promo.csv","./2022-2023/proba-s1-emd1-promo.csv","./2022-2023/eln2-s1-emd1-promo.csv","./2022-2023/eng-s1-emd1-promo.csv","./2022-2023/archi2-s1-emd1-promo.csv",
+var files = ["./2021-2022/NotesEmd1.csv", "./2021-2022/NotesEmd2.csv", "./2021-2022/Moyennes.csv","./2022-2023/Notes-S1-EMD1-2022-2023.csv"];
 var myTable = document.querySelector(".myTable");
 var form1 = document.querySelector('#form1');
 var form2 = document.querySelector('#form2');
