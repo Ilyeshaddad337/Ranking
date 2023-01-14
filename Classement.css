@@ -7,6 +7,7 @@
 
 }
 
+
 body {
    scroll-behavior: smooth;
    scrollbar-width: thin;
@@ -96,6 +97,7 @@ nav {
 }
 .search select {
    border-radius: 1.05rem;
+   -webkit-appearance: none;
    outline: none;
    border: none;
    margin: 1.02em 0;
