@@ -62,47 +62,36 @@ function sortTableByColumnA(table, column, asc = true) {
 function sortTableByColumnN (table,column,asc=true) {
   const tBody = table.tBodies[0];
   const rows = Array.from(tBody.querySelectorAll("tr"));
-  for (let i = 0; i < rows.length; i++) {
-    if (
-      isNaN(
-        parseFloat(rows[i].querySelector(`td:nth-child(${column + 1})`).textContent.trim()) 
-      )
-    ) {
-      rows[i].querySelector(`td:nth-child(${column + 1})`).textContent = 0;
-    }
-  }
+  
   //now we have an array of the values in the specified column ,we sort it
   //compare the content but changing the row it self
-  function sortAsc(arr) {
-    for (let i = 1; i < arr.length; i++) {
-      for (let j = 0; j < arr.length - i; j++) {
-         var aj = parseFloat(
-           arr[j].querySelector(`td:nth-child(${column + 1})`).textContent
-         );
-         var aj1 = parseFloat(
-           arr[j + 1].querySelector(`td:nth-child(${column + 1})`).textContent
-         );
-        if (aj <   aj1) {
-          var x = arr[j];
-          arr[j] = arr[j + 1];
-          arr[j + 1] = x;
-        }
+  function sortDsc(arr) {
+    arr = arr.sort((a,b) => {
+      var aj=parseFloat(a.querySelector(`td:nth-child(${column + 1})`).textContent);
+      var aj1=parseFloat(b.querySelector(`td:nth-child(${column + 1})`).textContent);
+      if (isNaN(aj)) {
+        return -1
       }
-    }
+      if (isNaN(aj1)) {
+        return  1
+      }
+      return aj -aj1;
+    })
+    
   }
 
-  function sortDsc(arr) {
-    for (let i = 1; i < arr.length; i++) {
-      for (let j = 0; j < arr.length - i; j++) {
-        var aj=parseFloat(arr[j].querySelector(`td:nth-child(${column + 1})`).textContent);
-        var aj1=parseFloat(arr[j+1].querySelector(`td:nth-child(${column + 1})`).textContent);
-        if (aj > aj1) {
-          var x = arr[j];
-          arr[j] = arr[j + 1];
-          arr[j + 1] = x;
-        }
+  function sortAsc(arr) {
+    arr = arr.sort((a,b) => {
+      var aj=parseFloat(a.querySelector(`td:nth-child(${column + 1})`).textContent);
+      var aj1=parseFloat(b.querySelector(`td:nth-child(${column + 1})`).textContent);
+      if (isNaN(aj)) {
+        return 1
       }
-    }
+      if (isNaN(aj1)) {
+        return -1
+      }
+      return aj1 -aj;
+    })
   }
 
   if (asc) {
