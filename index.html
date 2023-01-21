@@ -5,11 +5,11 @@
    <!-- Google tag (gtag.js) -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EW1QEDF6WM"></script>
    <script>
-   window.dataLayer = window.dataLayer || [];
-   function gtag(){dataLayer.push(arguments);}
-   gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-   gtag('config', 'G-EW1QEDF6WM');
+      gtag('config', 'G-EW1QEDF6WM');
    </script>
 
    <meta charset="UTF-8">
@@ -71,36 +71,49 @@
  <div class="results">
    <form action="#" id="form3" class="hello">
       <button class="hideAll">Show All</button>
-      
-         <select name="Notes" id="file">
-            <optgroup label="2021-2022">
-               <optgroup label="  S1">
+         <select name="promo" class="file" id="promo">
+            <optgroup label="Choose the promo">
+               <option value="2021">Promo 2021</option>
+               <option value="2022">Promo 2022</option>
+            </optgroup>
+         </select>
+         <select name="Notes1" class="file" id="file-2021">
+            <optgroup label ="Promo 2021">
+
+               <optgroup label="  2021-2022">
+                  <optgroup label="    S1">
                   <option value="0">Notes EMD 01</option>
                   <option value="1">Notes EMD 02</option>
                   <option value="2">Moyennes S1</option>
                </optgroup>
             </optgroup>
-            <optgroup label="2022-2023">
-               <optgroup label="  S1">
+            <optgroup label="  2022-2023">
+               <optgroup label="    S1">
                   <option value="3">Notes EMD 01</option>
-
-                  <!-- <option value="9" selected>Archi2</option> 
-                  <option value="3">SFSD</option>
-                  <option value="4">Algebra3</option>
-                  <option value="5">Analyse3</option> 
-                  <option value="6">Proba</option> 
-                  <option value="7">ELN2</option> 
-                  <option value="8">English</option>  -->
-                  
-
                </optgroup>
             </optgroup>
+         </optgroup>
          </select>   
+         
+         <select name="Notes2" class="file" id="file-2022">
+            <optgroup label ="Promo 2022">
+            <optgroup label="  2022-2023">
+               <optgroup label="    S1">
+                  <option value="3">Algo</option>
+                  <option value="0">Algebre1</option>
+                  <option value="4">Archi1</option> 
+                  <option value="1" selected>Sys1</option> 
+                  <option value="2">BW</option>
+               </optgroup>
+            </optgroup>
+         </optgroup>
+
+         </select>
    </form>
-   <div class="alert alert-pry hide" role="alert">
+   <!-- <div class="alert alert-pry hide" role="alert">
       This Average was calculated just using EMD1 notes, So don't let it desprate you !.
       <br>Note: Those who are marked as abs in the official notes, there Average is calculated replacing the modules they were absent in with 0 , So don't panic. 
-    </div>
+    </div> -->
     
    <div class="myTable">
           <table class="table-sortable table-responsive">

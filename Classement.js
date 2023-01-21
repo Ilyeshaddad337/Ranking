@@ -3,10 +3,12 @@ let students = [];
 let startt = 3
 const input = document.querySelector('#searching');
 const select = document.querySelector('select');
-const fileSelect = document.querySelector('#file');
 
+
+var current_promo = 'promo-2021'
 //"./2022-2023/sfsd-s1-emd1-promo.csv","./2022-2023/algebre3-s1-emd1-promo.csv","./2022-2023/analyse3-s1-emd1-promo.csv","./2022-2023/proba-s1-emd1-promo.csv","./2022-2023/eln2-s1-emd1-promo.csv","./2022-2023/eng-s1-emd1-promo.csv","./2022-2023/archi2-s1-emd1-promo.csv",
-var files = ["./2021-2022/NotesEmd1.csv", "./2021-2022/NotesEmd2.csv", "./2021-2022/Moyennes.csv","./2022-2023/Notes-S1-EMD1-2022-2023.csv"];
+var files_1 = [`./promo-2021/2021-2022/NotesEmd1.csv`, `./promo-2021/2021-2022/NotesEmd2.csv`, `./promo-2021/2021-2022/Moyennes.csv`,`./promo-2021/2022-2023/Notes-S1-EMD1-2022-2023.csv`];
+var files_2 = [`./promo-2022/2022-2023/algebre1-s1-emd1-promo.csv`,`./promo-2022/2022-2023/sys1-s1-emd1-promo.csv`,`./promo-2022/2022-2023/bw-s1-emd1-promo.csv`,`./promo-2022/2022-2023/algo-s1-emd1-promo.csv`,`./promo-2022/2022-2023/archi1-s1-emd1-promo.csv`]
 var myTable = document.querySelector(".myTable");
 var form1 = document.querySelector('#form1');
 var form2 = document.querySelector('#form2');
@@ -144,10 +146,10 @@ async function getData(file) {
 function insert_labels(content,labels,notes){
   if (currentHeaders.length == 0) {
     content.innerHTML = "<label>No Data</label>";
-    alertt.classList.add("hide");
+    alertt?.classList.add("hide");
   } else if (currentHeaders[0] == "There is no data") {
     content.innerHTML = "<label>No Data</label>";
-    alertt.classList.add("hide");
+    alertt?.classList.add("hide");
 
   } 
   else {
@@ -179,8 +181,8 @@ function insert_labels(content,labels,notes){
 //inserting the elements
 async function inserting(table,file) {
   await getData(file);
-  alertt.classList.remove("hide")
-  setTimeout(function(){ alertt.classList.add("hide") }, 15000);
+  alertt?.classList.remove("hide")
+  setTimeout(function(){ alertt?.classList.add("hide") }, 15000);
   // initialize the labels
   var content = document.querySelector("div.content");
   content.innerHTML = "";
@@ -331,7 +333,7 @@ async function inserting(table,file) {
   }
   
 }
-inserting(table,files[startt]);
+inserting(table,files_1[startt]);
 
 //now for the search 
 input.addEventListener('input',() => {
@@ -463,15 +465,100 @@ window.addEventListener('resize',() =>{
 
 const showHide =document.querySelector('.hideAll');
 
-
 //choose between the files
-fileSelect.addEventListener('change',() => {
-  var ind = parseInt(fileSelect.value);
-  var tBody = table.tBodies[0];
-  while (tBody.firstChild) {
-    tBody.removeChild(tBody.firstChild);
-  }
-  students = [];
-  inserting(table,files[ind]);
+var current_promo_sel = document.querySelector('#promo');
+const fileSelect2021 = document.querySelector('#file-2021');
+const fileSelect2022 = document.querySelector('#file-2022');
+//initialise
+let prom = current_promo_sel.value;
+if (prom == '2021') {
+  fileSelect2021.classList.remove('hide');
+  fileSelect2022.classList.add('hide');
+  fileSelect2021.addEventListener('change',() => {
+    var ind = parseInt(fileSelect2021.value);
+    var tBody = table.tBodies[0];
+    while (tBody.firstChild) {
+      tBody.removeChild(tBody.firstChild);
+    }
+    students = [];
+    inserting(table,files_1[ind]);
+    
+  })
+  let ind = parseInt(fileSelect2021.value);
+    let tBody = table.tBodies[0];
+    while (tBody.firstChild) {
+      tBody.removeChild(tBody.firstChild);
+    }
+    students = [];
+    inserting(table,files_1[ind]);
+} else {
   
+  fileSelect2022.classList.remove('hide');
+  fileSelect2021.classList.add('hide');
+  fileSelect2022.addEventListener('change',() => {
+    let ind = parseInt(fileSelect2022.value);
+    let tBody = table.tBodies[0];
+    while (tBody.firstChild) {
+      tBody.removeChild(tBody.firstChild);
+    }
+    students = [];
+    inserting(table,files_2[ind]);
+    
+  })
+  let ind = parseInt(fileSelect2022.value);
+    let tBody = table.tBodies[0];
+    while (tBody.firstChild) {
+      tBody.removeChild(tBody.firstChild);
+    }
+    students = [];
+    inserting(table,files_2[ind]);
+}
+current_promo_sel.addEventListener('change',() => {
+
+  let prom = current_promo_sel.value;
+  
+
+  if (prom == '2021') {
+    fileSelect2021.classList.remove('hide');
+    fileSelect2022.classList.add('hide');
+    fileSelect2021.addEventListener('change',() => {
+      var ind = parseInt(fileSelect2021.value);
+      var tBody = table.tBodies[0];
+      while (tBody.firstChild) {
+        tBody.removeChild(tBody.firstChild);
+      }
+      students = [];
+      inserting(table,files_1[ind]);
+      
+    })
+    let ind = parseInt(fileSelect2021.value);
+      let tBody = table.tBodies[0];
+      while (tBody.firstChild) {
+        tBody.removeChild(tBody.firstChild);
+      }
+      students = [];
+      inserting(table,files_1[ind]);
+  } else {
+    
+    fileSelect2022.classList.remove('hide');
+    fileSelect2021.classList.add('hide');
+    fileSelect2022.addEventListener('change',() => {
+      let ind = parseInt(fileSelect2022.value);
+      let tBody = table.tBodies[0];
+      while (tBody.firstChild) {
+        tBody.removeChild(tBody.firstChild);
+      }
+      students = [];
+      inserting(table,files_2[ind]);
+      
+    })
+    let ind = parseInt(fileSelect2022.value);
+      let tBody = table.tBodies[0];
+      while (tBody.firstChild) {
+        tBody.removeChild(tBody.firstChild);
+      }
+      students = [];
+      inserting(table,files_2[ind]);
+  }
+
 })

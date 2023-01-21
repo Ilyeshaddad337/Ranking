@@ -126,6 +126,9 @@ nav {
    padding-left: 0.9375rem;
    padding-right: 0.9375rem;  
 }
+.results label {
+   color: #364958;
+}
 .content label {
    padding: 0.636rem;
    transition: transform 200ms;
@@ -151,6 +154,11 @@ nav {
 }
 .hello {
    margin-bottom: 1.1rem;
+   display: flex;
+   gap: 20px;
+   flex-wrap: wrap;
+   justify-content: center;
+ 
 }
 
 @media (max-width: 900px){
@@ -208,9 +216,9 @@ nav {
    .header {
       font-size: 1.1rem;
    }
-   .hideAll {
+   /* .hideAll {
       margin-bottom: 0.4rem;
-   }
+   } */
 }
 .myTable {
    max-width: 95%;
@@ -380,7 +388,7 @@ label input:checked{
    
 
 }
-.hideAll ,#file{
+.hideAll , .file{
    outline: none;
    border: 0;
    background-color: #364958;
