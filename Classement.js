@@ -470,20 +470,31 @@ var current_promo_sel = document.querySelector('#promo');
 const fileSelect2021 = document.querySelector('#file-2021');
 const fileSelect2022 = document.querySelector('#file-2022');
 //initialise
+fileSelect2021.addEventListener('change',() => {
+  var ind = parseInt(fileSelect2021.value);
+  var tBody = table.tBodies[0];
+  while (tBody.firstChild) {
+    tBody.removeChild(tBody.firstChild);
+  }
+  students = [];
+  inserting(table,files_1[ind]);
+  
+})
+fileSelect2022.addEventListener('change',() => {
+  let ind = parseInt(fileSelect2022.value);
+  let tBody = table.tBodies[0];
+  while (tBody.firstChild) {
+    tBody.removeChild(tBody.firstChild);
+  }
+  students = [];
+  inserting(table,files_2[ind]);
+  
+})
+
 let prom = current_promo_sel.value;
 if (prom == '2021') {
   fileSelect2021.classList.remove('hide');
   fileSelect2022.classList.add('hide');
-  fileSelect2021.addEventListener('change',() => {
-    var ind = parseInt(fileSelect2021.value);
-    var tBody = table.tBodies[0];
-    while (tBody.firstChild) {
-      tBody.removeChild(tBody.firstChild);
-    }
-    students = [];
-    inserting(table,files_1[ind]);
-    
-  })
   let ind = parseInt(fileSelect2021.value);
     let tBody = table.tBodies[0];
     while (tBody.firstChild) {
@@ -495,16 +506,7 @@ if (prom == '2021') {
   
   fileSelect2022.classList.remove('hide');
   fileSelect2021.classList.add('hide');
-  fileSelect2022.addEventListener('change',() => {
-    let ind = parseInt(fileSelect2022.value);
-    let tBody = table.tBodies[0];
-    while (tBody.firstChild) {
-      tBody.removeChild(tBody.firstChild);
-    }
-    students = [];
-    inserting(table,files_2[ind]);
-    
-  })
+  
   let ind = parseInt(fileSelect2022.value);
     let tBody = table.tBodies[0];
     while (tBody.firstChild) {
@@ -521,16 +523,7 @@ current_promo_sel.addEventListener('change',() => {
   if (prom == '2021') {
     fileSelect2021.classList.remove('hide');
     fileSelect2022.classList.add('hide');
-    fileSelect2021.addEventListener('change',() => {
-      var ind = parseInt(fileSelect2021.value);
-      var tBody = table.tBodies[0];
-      while (tBody.firstChild) {
-        tBody.removeChild(tBody.firstChild);
-      }
-      students = [];
-      inserting(table,files_1[ind]);
-      
-    })
+    
     let ind = parseInt(fileSelect2021.value);
       let tBody = table.tBodies[0];
       while (tBody.firstChild) {
@@ -542,16 +535,7 @@ current_promo_sel.addEventListener('change',() => {
     
     fileSelect2022.classList.remove('hide');
     fileSelect2021.classList.add('hide');
-    fileSelect2022.addEventListener('change',() => {
-      let ind = parseInt(fileSelect2022.value);
-      let tBody = table.tBodies[0];
-      while (tBody.firstChild) {
-        tBody.removeChild(tBody.firstChild);
-      }
-      students = [];
-      inserting(table,files_2[ind]);
-      
-    })
+    
     let ind = parseInt(fileSelect2022.value);
       let tBody = table.tBodies[0];
       while (tBody.firstChild) {
