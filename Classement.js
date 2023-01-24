@@ -333,7 +333,6 @@ async function inserting(table,file) {
   }
   
 }
-inserting(table,files_1[startt]);
 
 //now for the search 
 input.addEventListener('input',() => {
