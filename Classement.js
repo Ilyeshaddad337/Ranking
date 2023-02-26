@@ -7,7 +7,7 @@ const select = document.querySelector('select');
 const excluded = ['BELARBIChifae ribal']
 var current_promo = 'promo-2021'
 //"./2022-2023/sfsd-s1-emd1-promo.csv","./2022-2023/algebre3-s1-emd1-promo.csv","./2022-2023/analyse3-s1-emd1-promo.csv","./2022-2023/proba-s1-emd1-promo.csv","./2022-2023/eln2-s1-emd1-promo.csv","./2022-2023/eng-s1-emd1-promo.csv","./2022-2023/archi2-s1-emd1-promo.csv",
-var files_1 = [`./promo-2021/2021-2022/NotesEmd1.csv`, `./promo-2021/2021-2022/NotesEmd2.csv`, `./promo-2021/2021-2022/Moyennes.csv`,`./promo-2021/2022-2023/Notes-S1-EMD1-2022-2023.csv`,'./promo-2021/2022-2023/archi2-s1-emd2-promo.csv', './promo-2021/2022-2023/proba-s1-emd2-promo.csv'];
+var files_1 = [`./promo-2021/2021-2022/NotesEmd1.csv`, `./promo-2021/2021-2022/NotesEmd2.csv`, `./promo-2021/2021-2022/Moyennes.csv`,`./promo-2021/2022-2023/Notes-S1-EMD1-2022-2023.csv`,'./promo-2021/2022-2023/archi2-s1-emd2-promo.csv', './promo-2021/2022-2023/proba-s1-emd2-promo.csv','./promo-2021/2022-2023/algebre3-s1-emd2-promo.csv','./promo-2021/2022-2023/sfsd-s1-emd2-promo.csv'];
 var files_2 = [`./promo-2022/2022-2023/algebre1-s1-emd1-promo.csv`,`./promo-2022/2022-2023/sys1-s1-emd1-promo.csv`,`./promo-2022/2022-2023/bw-s1-emd1-promo.csv`,`./promo-2022/2022-2023/algo-s1-emd1-promo.csv`,`./promo-2022/2022-2023/archi1-s1-emd1-promo.csv`,'./promo-2022/2022-2023/analyse1-s1-emd1-promo.csv','./promo-2022/2022-2023/TEE-s1-emd1-promo.csv']
 var myTable = document.querySelector(".myTable");
 var form1 = document.querySelector('#form1');
