@@ -7,7 +7,7 @@ const select = document.querySelector('select');
 const excluded = ['BELARBIChifae ribal']
 var current_promo = 'promo-2021'
 //"./2022-2023/sfsd-s1-emd1-promo.csv","./2022-2023/algebre3-s1-emd1-promo.csv","./2022-2023/analyse3-s1-emd1-promo.csv","./2022-2023/proba-s1-emd1-promo.csv","./2022-2023/eln2-s1-emd1-promo.csv","./2022-2023/eng-s1-emd1-promo.csv","./2022-2023/archi2-s1-emd1-promo.csv",
-var files_1 = [`./promo-2021/2021-2022/NotesEmd1.csv`, `./promo-2021/2021-2022/NotesEmd2.csv`, `./promo-2021/2021-2022/Moyennes.csv`,`./promo-2021/2022-2023/Notes-S1-EMD1-2022-2023.csv`,'./promo-2021/2022-2023/archi2-s1-emd2-promo.csv', './promo-2021/2022-2023/proba-s1-emd2-promo.csv','./promo-2021/2022-2023/algebre3-s1-emd2-promo.csv','./promo-2021/2022-2023/sfsd-s1-emd2-promo.csv'];
+var files_1 = [`./promo-2021/2021-2022/NotesEmd1.csv`, `./promo-2021/2021-2022/NotesEmd2.csv`, `./promo-2021/2021-2022/Moyennes.csv`,`./promo-2021/2022-2023/Notes-S1-EMD1-2022-2023.csv`, './promo-2021/2022-2023/archi2-s1-total-promo.csv', './promo-2021/2022-2023/proba-s1-emd2-promo.csv','./promo-2021/2022-2023/algebre3-s1-emd2-promo.csv','./promo-2021/2022-2023/sfsd-s1-emd2-promo.csv', './promo-2021/2022-2023/economie-s1-emd-promo.csv'];
 var files_2 = [`./promo-2022/2022-2023/algebre1-s1-emd1-promo.csv`,`./promo-2022/2022-2023/sys1-s1-emd1-promo.csv`,`./promo-2022/2022-2023/bw-s1-emd1-promo.csv`,`./promo-2022/2022-2023/algo-s1-emd1-promo.csv`,`./promo-2022/2022-2023/archi1-s1-emd1-promo.csv`,'./promo-2022/2022-2023/analyse1-s1-emd1-promo.csv','./promo-2022/2022-2023/TEE-s1-emd1-promo.csv']
 var myTable = document.querySelector(".myTable");
 var form1 = document.querySelector('#form1');
@@ -162,7 +162,7 @@ function insert_labels(content,labels,notes){
       input.setAttribute("type", "checkbox");
       input.setAttribute("id", currentHeaders[i]);
       input.setAttribute("value", currentHeaders[i]);
-      if (i >= 5) {
+      if (i >= 6) {
         input.checked = false;
         notes.push(input)
         
@@ -171,7 +171,7 @@ function insert_labels(content,labels,notes){
       } 
       label.appendChild(input);
       labels.push(label)
-      if (i >= 5 ) {
+      if (i >= 6 ) {
         labels[i].style.textDecoration = 'line-through'
       }
       content.appendChild(label);
@@ -181,8 +181,8 @@ function insert_labels(content,labels,notes){
 //inserting the elements
 async function inserting(table,file) {
   await getData(file);
-  alertt?.classList.remove("hide")
-  setTimeout(function(){ alertt?.classList.add("hide") }, 15000);
+  //alertt?.classList.remove("hide")
+  //setTimeout(function(){ alertt?.classList.add("hide") }, 15000);
   // initialize the labels
   var content = document.querySelector("div.content");
   content.innerHTML = "";
@@ -199,7 +199,7 @@ async function inserting(table,file) {
   for (let i = 0; i < currentHeaders.length; i++) {
     var th = document.createElement("th");
     th.textContent = currentHeaders[i];
-    if (i >= 5 && showHide.innerText == "Show All") {
+    if (i >= 6 && showHide.innerText == "Show All") {
       th.classList.add("hide");
     }
     if (isNaN(parseFloat(students[0][i]))) {
@@ -247,7 +247,7 @@ async function inserting(table,file) {
     for (let j = 0; j < students[i].length; j++) {
       var td = document.createElement("td");
       td.textContent = students[i][j];
-      if (j >= 5 && showHide.innerText == "Show All") {
+      if (j >= 6 && showHide.innerText == "Show All") {
         td.classList.add("hide");
       }
       tr.appendChild(td);
@@ -313,14 +313,14 @@ async function inserting(table,file) {
         if (e.currentTarget.notes.length > 0) {
           e.currentTarget.notes.forEach((e,ind)=> {
             e.checked = true;
-            ths[ind+5].classList.remove("hide");
+            ths[ind+6].classList.remove("hide");
             trs.forEach((e1) => {
-              e1.querySelector(`td:nth-child(${ind + 6})`).classList.remove(
+              e1.querySelector(`td:nth-child(${ind + 7})`).classList.remove(
                 "hide"
               );
             
             });
-            labels[ind + 5].style.textDecoration = "";
+            labels[ind + 6].style.textDecoration = "";
                 
           })
         }
@@ -330,11 +330,11 @@ async function inserting(table,file) {
           
           e.currentTarget.notes.forEach((e, ind) => {
             e.checked = false;
-            ths[ind+5].classList.add("hide");
+            ths[ind+6].classList.add("hide");
             trs.forEach((e1) => {
-              e1.querySelector(`td:nth-child(${ind + 6})`).classList.add("hide");
+              e1.querySelector(`td:nth-child(${ind + 7})`).classList.add("hide");
             });
-            labels[ind+5].style.textDecoration = "line-through";
+            labels[ind+6].style.textDecoration = "line-through";
             
           });
         }
