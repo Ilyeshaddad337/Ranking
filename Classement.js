@@ -181,8 +181,8 @@ function insert_labels(content,labels,notes){
 //inserting the elements
 async function inserting(table,file) {
   await getData(file);
-  //alertt?.classList.remove("hide")
-  //setTimeout(function(){ alertt?.classList.add("hide") }, 15000);
+  alertt?.classList.remove("hide")
+  setTimeout(function(){ alertt?.classList.add("hide") }, 40000);
   // initialize the labels
   var content = document.querySelector("div.content");
   content.innerHTML = "";

@@ -228,7 +228,11 @@ nav {
    height: auto;
    scrollbar-width: thin;
 }
+span.recentMark {
+   font-weight: 400;
+   font-size: 1.05rem;
 
+}
 
 table {
 	border-collapse: collapse;
