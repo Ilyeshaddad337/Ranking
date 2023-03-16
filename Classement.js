@@ -4,7 +4,7 @@ let startt = 3
 const input = document.querySelector('#searching');
 const select = document.querySelector('select');
 
-const excluded = ['BELARBIChifae ribal']
+const excluded = ['BELARBIChifae ribal', 'BERRAHEL']
 var current_promo = 'promo-2021'
 //"./2022-2023/sfsd-s1-emd1-promo.csv","./2022-2023/algebre3-s1-emd1-promo.csv","./2022-2023/analyse3-s1-emd1-promo.csv","./2022-2023/proba-s1-emd1-promo.csv","./2022-2023/eln2-s1-emd1-promo.csv","./2022-2023/eng-s1-emd1-promo.csv","./2022-2023/archi2-s1-emd1-promo.csv",
 var files_1 = [`./promo-2021/2021-2022/NotesEmd1.csv`, `./promo-2021/2021-2022/NotesEmd2.csv`, `./promo-2021/2021-2022/Moyennes.csv`,`./promo-2021/2022-2023/Notes-S1-EMD1-2022-2023.csv`, './promo-2021/2022-2023/archi2-s1-total-promo.csv', './promo-2021/2022-2023/proba-s1-emd2-promo.csv','./promo-2021/2022-2023/algebre3-s1-emd2-promo.csv','./promo-2021/2022-2023/sfsd-s1-emd2-promo.csv', './promo-2021/2022-2023/economie-s1-emd-promo.csv','./promo-2021/2022-2023/eln2-s1-total.csv','./promo-2021/2022-2023/eng-s1-emd2-promo.csv'];
