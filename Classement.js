@@ -215,24 +215,31 @@ async function inserting(table,file) {
   
   //select all the th in table row
   var ths = trr.querySelectorAll("th");
+  let i = 0;
+  let myTh;
   ths.forEach((th) => {
     if (th.classList.contains("thA")) {
       th.addEventListener("click", () => {
         const tableElement = th.parentElement.parentElement.parentElement;
         const headerIndex = Array.prototype.indexOf.call(th.parentElement.children, th);
         const currentIsAscending = th.classList.contains("th-sort-asc");
-        
         sortTableByColumnA(tableElement, headerIndex, !currentIsAscending);
       });
     } else {
+
       th.addEventListener("click", () => {
+        
         const tableElement = th.parentElement.parentElement.parentElement;
         const headerIndex = Array.prototype.indexOf.call(th.parentElement.children, th);
         const currentIsAscending = th.classList.contains("th-sort-asc");
         
         sortTableByColumnN(tableElement, headerIndex, !currentIsAscending);
       });
-      
+      if (i==0) {
+       //click on this th header to sort the table
+       myTh = th;
+       i++;   
+      }
     }
 
   });
@@ -342,7 +349,7 @@ async function inserting(table,file) {
       }
     })
   }
-  
+  myTh.click();
 }
 
 //now for the search 
