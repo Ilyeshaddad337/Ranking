@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Google tag (gtag.js)
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EW1QEDF6WM"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EW1QEDF6WM');
+    </script> -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/classmentIcon.webp" />
+    <link rel="stylesheet" href="analysis.css">
+    <title>Analytics</title>
+</head>
+<body>
+        <div class="header">
+            <nav>
+                <a href="analitics.html">Analytics</a>
+                <a href="index.html">Classement</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHb6qvahYJXs-dZ6Nw8namGfysBeZGkLuAqE9mdOhbyn8A1w/viewform?fbclid=IwAR1OmpzWBTzmaBaDp0GvNrVInCfQ4ocwLxoWR7GXgzPlMzIxGxfGf11m66w">Report</a>
+            </nav>
+        </div>
+        <div class="results-body">
+            <div class="card avrg_succs">
+                <div class="card-opt">
+                    <input  style="margin-left: 20px;" type="checkbox">
+                    <input style="margin-left: 20px;"  type="radio">
+                    
+                </div> 
+                <div class="cnv">
+                    <canvas id="avrg_succs" ></canvas>
+                </div>
+            </div>
+            <div class="card means">
+                <div class="card-opt">
+                    <input  style="margin-left: 20px;" type="checkbox">
+                    <input style="margin-left: 20px;"  type="radio">
+                </div> 
+                <div class="cnv">
+                    <canvas id="means" ></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="canvas">
+                <div class="valuesCount card">
+                    <div class="card-opt">
+                        <input  style="margin-left: 20px;" type="checkbox">
+                        <input style="margin-left: 20px;"  type="radio">
+                        <select class = "modules" data-chart="valuesCount" style="margin-left: 20px;"  >
+                            <optgroup label= "Modules"></optgroup>
+                        </select>
+                    </div>    
+                    <div class="cnv">
+                        <canvas id="valuesCount" ></canvas>
+                    </div>
+                </div>
+                <div class="safe card">
+                    <div class="card-opt">
+                        <input  style="margin-left: 20px;" type="checkbox">
+                        <input style="margin-left: 20px;"  type="radio">
+                        
+                    </div>    
+                    <div class="cnv">
+                        <canvas id="safe" ></canvas>
+                    </div>
+        </div>
+    </div>
+        
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="analysis.js"></script>
+</body>
+</html>
