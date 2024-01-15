@@ -1,4 +1,4 @@
-Nom,Prenom,Note
+Nom,Prénom,Note
 ABAHRI,Khalida,2.25
 ABDELKADER BERREHIL,Said,8.5
 ABDELMALEK,Lamia,16
@@ -17,46 +17,46 @@ AOMAR,Mohamed abdelillah,
 AOUAICHIA,Hafssa,12.75
 ATAMNIA,Nadjib,16.25
 ATSAMNIA,Abderraouf,17
-BADEREDDINE,Haithamb,10
+BADEREDDINE,Haitham,10
 BAGHDADLI,Abdelhadi,14
 BAHRI,Mohamed el amine,18.5
 BAICHE,Asmaa,7.5
 BAIDAR,Samir,13.75
 BEKHTI,Djalal,5
-BELABBASc,Asma,10.25
+BELABBAS,Asma,10.25
 BELARBI,Chifae ribal,12.5
 BELHOUARI,Essadjidet,7.75
-BELHOUARI,Nassibai,13
+BELHOUARI,Nassiba,13
 BELKORCHE,Widad,12
 BELLAL,Antri walid,
 BELMANA,Soufyane,7
-BELMILOUDc,Laid aboubakr,17.75
+BELMILOUD,Laid aboubakr,17.75
 BENAHMED,Firdaws sotra,5.75
 BENAHMED DAIDJ,DOUAA,15.25
 BENAMEUR BELKACEM,Souad,9.75
 BENAOUDA,Tarik abdelhadi,10.25
 BENAOUF,Mohamed rami,4.25
-BENAZZI,Abdelwahabb,11
+BENAZZI,Abdelwahab,11
 BENBAKRETI,Mohammed el amine,8.5
-BENBEDRA ,Mohammed el amine,10.5
-BENCHAREF,Fatima zohrabا ,4.5
+BENBEDRA,Mohammed el amine,10.5
+BENCHAREF,Fatima zohra,4.5
 BENCHEHIDA,Hamza,1.25
-BENCHETIOUI,Youcef harouneb ,11.25
+BENCHETIOUI,Youcef haroune,11.25
 BENDOU,Ahmed el mahdi,7.75
-BENGHENIMA ,Hafsa,7.5
+BENGHENIMA,Hafsa,7.5
 BENRABAH,SEIF ISLEM,12
 BENSAID,Sana,9.25
 BENSETALLAH,Soufiane,6.5
 BENZAIMA,Fadi,7.5
 BENZAOUCHA,Asma,8
 BETTADJ,Ikram,12.75
-BOUAKAZ/زاكعوب,Abderraouf/فوؤرلا دبع,
-BOUCHELAREM,Lydia  houyem,9.5
-BOUCHETA,Zahrab,2.5
+BOUAKAZ,Abderraouf,
+BOUCHELAREM,Lydia houyem,9.5
+BOUCHETA,Zahra,2.5
 BOUDAOUD,Djaber,4.5
 BOUFAFA,Mohamed,11
 BOUGHALEM,Khayra,12
-BOUHENNIbﻮﺑ,Othmane,6.25
+BOUHENNI,Othmane,6.25
 BOUKENNOUCHE,Mariem,11.75
 BOUKHAROUBA,Souad,4.5
 BOUKHATEB,Mohammed,
@@ -84,32 +84,32 @@ DJERAD,Abdelheq,5.25
 DJEZIRI,Oussama,5.25
 DJILALI BENFREDJ,Ishak,8.75
 DJILI,Maroua,10.75
-DJIROUN,Hibab,15
-DOUIS,Fatima zohrab,15.25
+DJIROUN,Hiba,15
+DOUIS,Fatima zohra,15.25
 ELHETTAK,Narimene,13.5
 ENNOUNI,Mourtada essadik,13.25
 FARES,Chaima,14.25
 FARESSI,El hadj madani,10.5
 FELLAHI,Achref ghanem,7
 FENDI,Mohamed,
-FRIH/ح    يرف,Mohamed djaouad oussama/ةماسأ داوج دمحم,
+FRIH,Mohamed djaouad oussama,
 GHANDOUZ,Amina,13.75
 GUECHAOUI,Mohamed,9.25
 GUERINIK,Chemseddine abderrahmane,13.75
 GUESSAOUI,Khaled,4.75
-GUEZZEN,Hichemb,7
+GUEZZEN,Hichem,7
 HACHEMI,Abdelaziz,10
 HADDAD,Ilyes,13
 HADJ ABDERRAHMANE,Ahlem chahinez,8.25
-HAKKASb,Yacine,12.25
+HAKKAS,Yacine,12.25
 HALIMI,Abdelkrim,
 HALLOUCHE,Abdessamed,8.25
-HAMDANI ,Ibrahim,13.5
+HAMDANI,Ibrahim,13.5
 HAMDI,Aya,15.75
 HAMMADI,Mohammed,
 HANAIA,Youcef,1.5
 HANNACHI,Seif errahmane,12.25
-HAOUARIb,Mohamed abdelhafidh,9.5
+HAOUARI,Mohamed abdelhafidh,9.5
 HARRATH,Bouchra,10.75
 HOCINI,Souha,9.75
 KADDOUR BAKIR,Riham,5.5
@@ -124,8 +124,8 @@ KHALDI,Mohamed rafik,11
 KOUADRI,SOUMIA,2
 KRIM,Abdelouahab,5.5
 LACHOUB,Hanane,10.75
-LAKHAL,Fatima zohrabا ,14.75
-LAKHMI,Hichem billalb,3.25
+LAKHAL,Fatima zohra,14.75
+LAKHMI,Hichem billal,3.25
 LALLICHE,Abdelhadi,15.5
 LARBI,Mohammed achraf,13.25
 LARIBI,Zahra ouissem,7.75
@@ -133,25 +133,25 @@ LATRACHE,Abdenour,8.25
 LEBAILI,Mohamed ouail,9.5
 MADANI,Tayeb,
 MAREDJ,Abderrahmene,9
-MAROC,Abdelhakim fouadi,19.25
+MAROC,Abdelhakim fouad,19.25
 MEBROUK,Yahia seif el islam,6.75
 MECHAIA,Feriel,1.75
 MEFLAH,Hossam eddine,8
 MEFLAH,Yousra,13.25
 MEHTOUGUI,Aya,10.75
 MERZOUK,Allaeddine,4.75
-MERZOUKA,Younes abdel samadei,17.25
+MERZOUKA,Younes abdel samade,17.25
 MESBAHI,Ibrahim,11.25
 MOKADDEM,Sara,10.5
 MOKHTARI,Hadjia meriem,9.25
 MOSTEFAOUI,Toufik,12
 MOUSSI,Mohamed el amine,12.5
-NESSAL,Zakaria rachidi,9.5
+NESSAL,Zakaria rachid,9.5
 OMARI,Abdessalaem,8
 OMRANI,Rabah,17
 OMRI,Mohammed ilyes,13.25
 OUARETH,Mohammed es salih,11.25
-OUCHENE,HIBET ELRAHMANEb,7.75
+OUCHENE,HIBET ELRAHMANE,7.75
 OUDDANE,Youcef fahed,7
 OUIS,Farouk abdelmadjid,8.5
 OULAD SAID,Mohamed lamine,7.25
@@ -167,19 +167,19 @@ REHAHLA,Ikram,12.5
 ROUAINIA,Mohammed yacine,
 ROUBACHE,Islam,
 SAADI,Ahmed,13.5
-SAIDANI,Mahmoud yassers,13.5
+SAIDANI,Mahmoud yasser,13.5
 SAKHRAOUI,Chiheb eddine,5.5
 SALMI,Oussama,11.25
 SEBAA,Wassim djillali,11.75
-SENHADJI,Mohamed said ,16.25
+SENHADJI,Mohamed said,16.25
 SENOUCI,Ibrahim,12
 SERGHINE,Abdel illah,9.75
 SLIMANI,Aymen,5
-TADJ/جات,Mohammed walid/ديلو دمحم,
+TADJ,Mohammed walid,
 TAHIR,Abderrahmane el mehdi,12
 TAIBI,Narimane,17
 TALBI,Youcef,8.5
-TOUAHRIbاﻮﻃ,Khalid,11.25
+TOUAHRI,Khalid,11.25
 TOUBAL SEGHIR,Kheir eddine,10.5
 TOUMI,Adem,3.25
 YAGOUBI,Ayoub,10.75
@@ -187,7 +187,7 @@ YAHIAOUI,Yamina,9.75
 YOUSFI,Naouafil,2.5
 ZALLA,Ikram,
 ZEDDOUN,Lokmane,16
-ZELLAGUI,Mohamed diaa eddine ,12
+ZELLAGUI,Mohamed diaa eddine,12
 ZERGA,Elbatoul,7
 ZERROUGUI,Amdjed,5
 ZITOUNI,Ahmed,8.25
