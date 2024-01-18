@@ -4,7 +4,7 @@ let startt = 3
 const input = document.querySelector('#searching');
 const select = document.querySelector('select');
 
-const excluded = ['BELARBIChifae ribal', 'BERREHIL', 'KOUADRISOUMIA']
+const excluded = ['BELARBIChifae ribal', 'BERREHIL', 'KOUADRISOUMIA', 'AMERIMohammed']
 var current_promo = 'promo-2021'
 //"./2022-2023/sfsd-s1-emd1-promo.csv","./2022-2023/algebre3-s1-emd1-promo.csv","./2022-2023/analyse3-s1-emd1-promo.csv","./2022-2023/proba-s1-emd1-promo.csv","./2022-2023/eln2-s1-emd1-promo.csv","./2022-2023/eng-s1-emd1-promo.csv","./2022-2023/archi2-s1-emd1-promo.csv",
 //  './promo-2021/2022-2023/archi2-s1-total-promo.csv', './promo-2021/2022-2023/proba-s1-emd2-promo.csv','./promo-2021/2022-2023/algebre3-s1-emd2-promo.csv','./promo-2021/2022-2023/sfsd-s1-emd2-promo.csv', './promo-2021/2022-2023/economie-s1-emd-promo.csv','./promo-2021/2022-2023/eln2-s1-total.csv','./promo-2021/2022-2023/eng-s1-emd2-promo.csv',
@@ -185,6 +185,20 @@ function insert_labels(content,labels,notes){
     }
   }
 }
+
+function testColumn(i , students) {
+  var isNumber = false;
+  j = 0
+  while (!isNumber && j < students.length) {
+    if (!isNaN(parseFloat(students[j][i]))) {
+      isNumber = true;
+    }
+    j++
+  }
+  
+  return isNumber;
+  
+}
 //inserting the elements
 async function inserting(table,file) {
   await getData(file);
@@ -209,11 +223,11 @@ async function inserting(table,file) {
     if (i >= 6 && showHide.innerText == "Show All") {
       th.classList.add("hide");
     }
-    if (isNaN(parseFloat(students[0][i]))) {
-      th.classList.add("thA");
+    if (testColumn(i,students)) {
+      th.classList.add("thN");
       
     } else {  
-      th.classList.add("thN");
+      th.classList.add("thA");
       
     }
     trr.appendChild(th);
