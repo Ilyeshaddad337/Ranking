@@ -14,7 +14,7 @@ var files_1 = [`./promo-2021/2021-2022/NotesEmd1.csv`, `./promo-2021/2021-2022/N
           "./promo-2021/2022-2023/english-S2-emd1-promo.csv",`./promo-2021/2022-2023/Notes-EMD1-S2-promo.csv`,
           `./promo-2021/2022-2023/s2_avrgs.csv`,`./promo-2021/2022-2023/final_avrgs.csv`,'./promo-2021/2023-2024/se-s1-emd1.csv',
           './promo-2021/2023-2024/ro-s1-emd1.csv','./promo-2021/2023-2024/bdd-s1-emd1.csv','./promo-2021/2023-2024/thl-s1-emd1.csv',
-          './promo-2021/2023-2024/merged-avg.csv'];
+          './promo-2021/2023-2024/merged-avg.csv','./promo-2021/2023-2024/reseaux-s1-emd1.csv'];
 var files_2 = [`./promo-2022/2022-2023/algebre1-s1-emd1-promo.csv`,`./promo-2022/2022-2023/sys1-s1-emd1-promo.csv`,`./promo-2022/2022-2023/bw-s1-emd1-promo.csv`,`./promo-2022/2022-2023/algo-s1-emd1-promo.csv`,`./promo-2022/2022-2023/archi1-s1-emd1-promo.csv`,'./promo-2022/2022-2023/analyse1-s1-emd1-promo.csv','./promo-2022/2022-2023/TEE-s1-emd1-promo.csv']
 var myTable = document.querySelector(".myTable");
 var form1 = document.querySelector('#form1');

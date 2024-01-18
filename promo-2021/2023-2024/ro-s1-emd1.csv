@@ -2,7 +2,7 @@ Nom,Prénom,Note
 ABAHRI,Khalida,2.25
 ABDELKADER BERREHIL,Said,8.5
 ABDELMALEK,Lamia,16
-ABDESSELAM,Aimen,12
+ABDESSELAM,Aimen,12.5
 ABID,Mohamed abdessetar,11.75
 AGGOUN,Feriel meriem,8.25
 AISSAOUI,Ismail,15
@@ -18,7 +18,7 @@ AOUAICHIA,Hafssa,12.75
 ATAMNIA,Nadjib,16.25
 ATSAMNIA,Abderraouf,17
 BADEREDDINE,Haitham,10
-BAGHDADLI,Abdelhadi,14
+BAGHDADLI,Abdelhadi,16
 BAHRI,Mohamed el amine,18.5
 BAICHE,Asmaa,7.5
 BAIDAR,Samir,13.75
@@ -50,7 +50,7 @@ BENSETALLAH,Soufiane,6.5
 BENZAIMA,Fadi,7.5
 BENZAOUCHA,Asma,8
 BETTADJ,Ikram,12.75
-BOUAKAZ,Abderraouf,
+BOUAKAZ,Abderraouf,12.25
 BOUCHELAREM,Lydia houyem,9.5
 BOUCHETA,Zahra,2.5
 BOUDAOUD,Djaber,4.5
@@ -70,7 +70,7 @@ CHAIB,Fakhr eddine fouzi,8
 CHARRAK,Hossem eddine yakoub,10.25
 CHELLAL,Aicha,7.5
 CHERGUI,Mahdjouba bouchera,
-CHERRAK,Ismail anis,9.25
+CHERRAK,Ismail anis,9.75
 CHIALI,Akila,11
 DADDA,Hamida,16.25
 DADOUNE,Ikram,11.75
@@ -92,7 +92,7 @@ FARES,Chaima,14.25
 FARESSI,El hadj madani,10.5
 FELLAHI,Achref ghanem,7
 FENDI,Mohamed,
-FRIH,Mohamed djaouad oussama,
+FRIH,Mohamed djaouad oussama,9.75
 GHANDOUZ,Amina,13.75
 GUECHAOUI,Mohamed,9.25
 GUERINIK,Chemseddine abderrahmane,13.75
@@ -136,10 +136,10 @@ MAREDJ,Abderrahmene,9
 MAROC,Abdelhakim fouad,19.25
 MEBROUK,Yahia seif el islam,6.75
 MECHAIA,Feriel,1.75
-MEFLAH,Hossam eddine,8
-MEFLAH,Yousra,13.25
+MEFLAH,Hossam eddine,11.75
+MEFLAH,Yousra,15
 MEHTOUGUI,Aya,10.75
-MERZOUK,Allaeddine,4.75
+MERZOUK,Allaeddine,5.5
 MERZOUKA,Younes abdel samade,17.25
 MESBAHI,Ibrahim,11.25
 MOKADDEM,Sara,10.5
@@ -151,9 +151,9 @@ OMARI,Abdessalaem,8
 OMRANI,Rabah,17
 OMRI,Mohammed ilyes,13.25
 OUARETH,Mohammed es salih,11.25
-OUCHENE,HIBET ELRAHMANE,7.75
+OUCHENE,HIBET ELRAHMANE,8.25
 OUDDANE,Youcef fahed,7
-OUIS,Farouk abdelmadjid,8.5
+OUIS,Farouk abdelmadjid,10.75
 OULAD SAID,Mohamed lamine,7.25
 OULDLARBI,Nour eddine rayane,17.75
 OURRED,Islem charaf eddine,8
@@ -166,19 +166,19 @@ RAMLA,Yassine,9.75
 REHAHLA,Ikram,12.5
 ROUAINIA,Mohammed yacine,
 ROUBACHE,Islam,
-SAADI,Ahmed,13.5
+SAADI,Ahmed,13.75
 SAIDANI,Mahmoud yasser,13.5
 SAKHRAOUI,Chiheb eddine,5.5
 SALMI,Oussama,11.25
-SEBAA,Wassim djillali,11.75
+SEBAA,Wassim djillali,12.5
 SENHADJI,Mohamed said,16.25
 SENOUCI,Ibrahim,12
 SERGHINE,Abdel illah,9.75
 SLIMANI,Aymen,5
-TADJ,Mohammed walid,
-TAHIR,Abderrahmane el mehdi,12
+TADJ,Mohammed walid,7.5
+TAHIR,Abderrahmane el mehdi,16
 TAIBI,Narimane,17
-TALBI,Youcef,8.5
+TALBI,Youcef,9.25
 TOUAHRI,Khalid,11.25
 TOUBAL SEGHIR,Kheir eddine,10.5
 TOUMI,Adem,3.25
