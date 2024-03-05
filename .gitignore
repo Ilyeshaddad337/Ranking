@@ -3,5 +3,5 @@ test.py
 .ipynb_checkpoints
 ClassementPy
 calculate_avg.py
-private/
+private/*
 Classementreal.js
